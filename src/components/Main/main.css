@@ -1,0 +1,21 @@
+.main-wrapper {
+    width: 100%;
+}
+.sec-banner-p {
+    width: 100%;
+    height: 778px;
+    background-image: url('../../img/banner-principal.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section1 {
+    width: 90%;
+}
+.text-banner {
+    width: 100%;
+    max-width: 690px;
+    text-align: left;
+}
