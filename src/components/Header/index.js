@@ -1,14 +1,22 @@
 import * as React from 'react';
+import {setCookie, getCookie} from '../../utils/cookie'
+import { useIntl } from 'react-intl'
 import "./header.css"
 import Card from 'react-bootstrap/Card'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button';
 const Header = () => {
-    /* const [value, setValue] = React.useState('one');
-
-    const handleChange = (event, newValue) => {
+    const intl = useIntl()
+    const [value, setValue] = React.useState('');
+    const handleChange = (newValue) => {
       setValue(newValue);
-    }; */
+      setCookie('lang',newValue);
+      setTimeout(function(){
+        // eslint-disable-next-line no-restricted-globals
+        location.reload()
+    }, 1000);
+      console.log(value);
+    };
     
     return (
         <div className='header-content'>
@@ -38,35 +46,50 @@ const Header = () => {
             <Card.Header style={{background:"#003EDF",border:"none"}} text="dark">
                 <Nav variant="line" defaultActiveKey="#first" text="light">
                 <Nav.Item>
-                    <Nav.Link href="#first" style={{color:"#FFFFFF"}}>Conócenos</Nav.Link>
+                    <Nav.Link href="#know-us" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.knowus'})}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#link" style={{color:"#FFFFFF"}}>Servicios</Nav.Link>
+                    <Nav.Link href="#services" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.services'})}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#partners" style={{color:"#FFFFFF"}}>Partners</Nav.Link>
+                    <Nav.Link href="#partners" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.partners'})}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#premios-certificaciones" style={{color:"#FFFFFF"}}>Premios y Certificaciones</Nav.Link>
+                    <Nav.Link href="#awards-and-certifications" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.awards'})}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#tecnologias" style={{color:"#FFFFFF"}}>Tecnologías</Nav.Link>
+                    <Nav.Link href="#technologies" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.technologies'})}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#clientes" style={{color:"#FFFFFF"}}>Clientes</Nav.Link>
+                    <Nav.Link href="#costumers" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.customers'})}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#resellers" style={{color:"#FFFFFF"}}>Resellers</Nav.Link>
+                    <Nav.Link href="#resellers" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.resellers'})}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#trabaja" style={{color:"#FFFFFF"}}>Trabaja con Nosotros</Nav.Link>
+                    <Nav.Link href="#work-with-us" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.work'})}</Nav.Link>
                 </Nav.Item>
-                </Nav>
+                </Nav>       
             </Card.Header>
             </Card>
             <div className='btn-inter'>
-                <Button variant="light">Contáctanos</Button>
+                <Button variant="light">{intl.formatMessage({id: 'app.components.header.label.contact-us'})}</Button>
+                <div className="languages">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.99995 12.6566C10.124 12.6566 12.6565 10.124 12.6565 7.00001C12.6565 3.87598 10.124 1.34344 6.99995 1.34344C3.87591 1.34344 1.34338 3.87598 1.34338 7.00001C1.34338 10.124 3.87591 12.6566 6.99995 12.6566Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1.34338 7H12.6565" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.00005 1.34344C8.41492 2.89241 9.21898 4.90257 9.26268 7.00001C9.21898 9.09745 8.41492 11.1076 7.00005 12.6566C5.58519 11.1076 4.78112 9.09745 4.73743 7.00001C4.78112 4.90257 5.58519 2.89241 7.00005 1.34344V1.34344Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                <div className="languages1">
+                    <button onClick={()=>{handleChange('es-ES')}} className={getCookie('lang')==='es-ES'?'activo':''}>ES</button>
+                </div>/
+                <div className="languages2">
+                    <button onClick={()=>{handleChange('en-US')}} className={getCookie('lang')==='en-US'?'activo':''}>EN</button>
+                </div>
             </div>
+            </div>
+            
         </div>
     )
 }

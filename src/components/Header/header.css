@@ -5,4 +5,29 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.btn-inter {
+    display: flex;
+}
+.languages {
+    display: flex;
+    align-items: center;
+    border: none;
+    color: #FFFFFF;
+    margin-left: 20px;
+}
+.languages button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    color: #FFFFFF;
+    border: none;
+}
+.activo{
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border-radius: 10px;
 }
