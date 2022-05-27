@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { IntlProvider } from 'react-intl';
 import { getCookie, setCookie} from './utils/cookie'
 import './index.css';
@@ -26,12 +26,11 @@ if(!local){
 }
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <IntlProvider locale={local} messages={messages} defaultLocale="es-ES">
       <App />
     </IntlProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-

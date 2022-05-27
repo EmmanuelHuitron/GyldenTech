@@ -1,6 +1,7 @@
 import React from "react";
 import { useIntl } from "react-intl";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import {
   CardGroup,
   Card,
@@ -15,13 +16,17 @@ import card2 from "../../../img/Soporte.png";
 import card3 from "../../../img/Consultoria y Planeacion.png";
 import card4 from "../../../img/Payment Providers.png";
 import card5 from "../../../img/UXUI.png";
+/* import scrollreveal from "scrollreveal"; */
 
 const Services = () => {
-  
+  AOS.init(
+   { once: true }
+  );
   const intl = useIntl();
+
   return (
-    <div className="sec-services" id="services">
-      <div className="sec-title">
+    <div className="sec-services" id="services" >
+      <div className="sec-title" data-aos="slide-up" data-aos-duration="1000">
         <h2>
           {intl.formatMessage({
             id: "app.pages.home.seccionServices.label.title",

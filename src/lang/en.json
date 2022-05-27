@@ -33,5 +33,17 @@
     "app.pages.home.sectionAwards.label.card3-sutitle": "Winners ",
     "app.pages.home.sectionAwards.label.card4-title": "Agency + disruptive",
     "app.pages.home.sectionAwards.label.card4-sutitle": "Winners ",
-    "app.pages.home.sectionAwards.label.title-certificate": "Certifications"
+    "app.pages.home.sectionAwards.label.title-certificate": "Certifications",
+    "app.pages.home.sectionTech.label.title": "Technologies",
+    "app.pages.home.sectionCostumers.label.title": "Our clients",
+    "app.pages.home.sectionCostumers.label.subtitle": "Success stories",
+    "app.pages.home.sectionCostumers.label.subtitle2": "+ Clients",
+    "app.pages.home.sectionResellers.label.title": "Reseller Partners",
+    "app.pages.home.sectionResellers.label.cart1-title": "Content Management Tool",
+    "app.pages.home.sectionResellers.label.link": "Learn more",
+    "app.pages.home.sectionWorkUs.label.title": "Work with us",
+    "app.pages.home.sectionWorkUs.label.pmo": "PMO",
+    "app.pages.home.sectionWorkUs.label.qa": "QA",
+    "app.pages.home.sectionWorkUs.label.comercial": "Comercial",
+    "app.pages.home.sectionWorkUs.label.view-profile": "View profile"
 }

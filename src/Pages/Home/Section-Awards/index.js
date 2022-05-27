@@ -1,7 +1,9 @@
-import React , {useEffect} from "react";
+import React from "react";
 import { useIntl } from "react-intl";
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
-import scrollreveal from "scrollreveal";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+/* import scrollreveal from "scrollreveal"; */
 
 import cert1 from "../../../img/CERTIFIED-VTEX-Project.png";
 import cert2 from "../../../img/CERTIFIED-VTEX-Fronted.png";
@@ -9,72 +11,12 @@ import cert3 from "../../../img/CERTIFIED-VTEX-Reseller.png";
 import cert4 from "../../../img/CERTIFIED-VTEX-Suport.png";
 import cert5 from "../../../img/VTEX IO_Certified 1.png";
 const Awards = () => {
+  AOS.init();
   const intl = useIntl();
-  useEffect(() => {
-    const card1 = scrollreveal({
-      origin: "left",
-      distance: "100px",
-      duration: 500,
-      reset: false
-    });
-    card1.reveal(
-      `.scroll-card1`
-    )
-
-    const card2 = scrollreveal({
-      origin: "right",
-      distance: "100px",
-      duration: 1000,
-      reset: false
-    });
-    card2.reveal(
-      `.scroll-card2`
-    )
-    const card3 = scrollreveal({
-      origin: "left",
-      distance: "100px",
-      duration: 1500,
-      reset: false
-    });
-    card3.reveal(
-      `.scroll-card3,
-      .cert1,
-      .cert2`
-    )
-
-    const card4 = scrollreveal({
-      origin: "right",
-      distance: "100px",
-      duration: 2000,
-      reset: false
-    });
-    card4.reveal(
-      `.scroll-card4`
-    )
-    const certi = scrollreveal({
-      origin: "right",
-      distance: "100px",
-      duration: 1500,
-      reset: false
-    })
-    certi.reveal(`
-      .cert4,
-      .cert5
-    `)
-    const certiup = scrollreveal({
-      origin: "bottom",
-      distance: "100px",
-      duration: 2000,
-      reset: false
-    })
-    certiup.reveal(`
-      .cert3
-    `)
-
-  }, [])
+  
   return (
     <div className="sec-awards" id="awards-and-certifications">
-      <div className="sec-title">
+      <div className="sec-title" data-aos="slide-up" data-aos-duration="1000" data-aos-once="true">
         <h2>
           {intl.formatMessage({
             id: "app.pages.home.sectionAwards.label.title",
@@ -87,14 +29,9 @@ const Awards = () => {
           width: "90%"
         }}
       >
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gridGap: "35px",
-          marginBottom: "50px"
-        }}>
-          <Card body className="scroll-card1">
-            <CardBody style={{width: "590px", display: "flex", flexDirection: "row", justifyContent: "flex-start", padding: "40px 30px", background: "#F6F6F6"}}>
+        <div className="cards-awards">
+          <Card className="scroll-card1" data-aos={window.screen.width>768?"fade-right":"fade-down"} data-aos-duration="1000" data-aos-once="true">
+            <CardBody style={{width: "590px", display: "flex", flexDirection: "row", justifyContent: "flex-start", padding: "40px 30px"}}>
               <div className="image-card" style={{marginRight: "30px"}}>
                 <svg
                   width="118"
@@ -131,8 +68,8 @@ const Awards = () => {
               </div>
             </CardBody>
           </Card>
-          <Card body className="scroll-card2">
-            <CardBody style={{width: "590px", display: "flex", flexDirection: "row", justifyContent: "flex-start", padding: "40px 30px", background: "#F6F6F6"}}>
+          <Card className="scroll-card2" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">
+            <CardBody style={{width: "590px", display: "flex", flexDirection: "row", justifyContent: "flex-start", padding: "40px 30px"}}>
               <div className="image-card" style={{marginRight: "30px"}}>
                 <svg
                   width="118"
@@ -169,8 +106,8 @@ const Awards = () => {
               </div>
             </CardBody>
           </Card>
-          <Card body className="scroll-card3">
-            <CardBody style={{width: "590px", display: "flex", flexDirection: "row", justifyContent: "flex-start", padding: "40px 30px", background: "#F6F6F6"}}>
+          <Card className="scroll-card3" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
+            <CardBody style={{width: "590px", display: "flex", flexDirection: "row", justifyContent: "flex-start", padding: "40px 30px"}}>
               <div className="image-card" style={{marginRight: "30px"}}>
                 <svg
                   width="118"
@@ -207,8 +144,8 @@ const Awards = () => {
               </div>
             </CardBody>
           </Card>
-          <Card body className="scroll-card4">
-            <CardBody style={{width: "590px", display: "flex", flexDirection: "row", justifyContent: "flex-start", padding: "40px 30px", background: "#F6F6F6"}}>
+          <Card className="scroll-card4" data-aos="fade-down" data-aos-duration="2500" data-aos-once="true">
+            <CardBody style={{width: "590px", display: "flex", flexDirection: "row", justifyContent: "flex-start", padding: "40px 30px"}}>
               <div className="image-card" style={{marginRight: "30px"}}>
                 <svg
                   width="118"
@@ -255,11 +192,11 @@ const Awards = () => {
               </h3>
             </div>
             <div className="certificates-logos">
-                <img className="cert1" src={cert1} alt="cert1" />
-                <img className="cert2" src={cert2} alt="cert2" />
-                <img className="cert3" src={cert3} alt="cert3" />
-                <img className="cert4" src={cert4} alt="cert4" />
-                <img className="cert5" src={cert5} alt="cert5" />
+                <img className="cert1" src={cert1} alt="cert1" data-aos="fade-down" data-aos-duration="500" data-aos-once="true"/>
+                <img className="cert2" src={cert2} alt="cert2" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true"/>
+                <img className="cert3" src={cert3} alt="cert3" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true"/>
+                <img className="cert4" src={cert4} alt="cert4" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true"/>
+                <img className="cert5" src={cert5} alt="cert5" data-aos="fade-down" data-aos-duration="2500" data-aos-once="true"/>
             </div>
         </div>          
       </div>

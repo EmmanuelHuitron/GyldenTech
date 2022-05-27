@@ -87,7 +87,7 @@
 }
 .scroll-card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .card-body{
     max-height: 200px;
@@ -98,7 +98,7 @@
 .sec-services .card-body {
     align-items: center;
 }
-.card-img-top:nth-child(1){
+.sec-services .card-img-top:nth-child(1){
     width: 76px;
 }
 .sec-partners {
@@ -114,6 +114,12 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 60px;
+}
+.cards-awards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 35px;
+    margin-bottom: 50px;
 }
 .info-card {
     text-align: left;
@@ -155,16 +161,22 @@
 .sec-costumers {
     width: 100%;
     margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .sec-content.costumers{
     width: 100%;
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-bottom: 50px;
 }
 .sec-carrousel {
     width: 90%;
+    position: relative;
     max-width: 1290px;
     background-image: url('../../img/fondo_caso de exito_desk.png');
     background-repeat: no-repeat;
@@ -180,10 +192,40 @@
 .sec-carrousel.loaded {
     opacity: 1;
 }
+.logos-enterprises {
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.logos-enterprises .img-select {
+    height: 3px;
+    background: transparent;
+    transition: all 1s;
+}
+.logos-enterprises .img-select.selected { 
+    height: 3px;
+    background: #0084FF;
+}
 
 .sec-left.loader img{
     opacity: 0;
     transition: 1s;
+}
+.dots-carrusel {
+    display: flex;
+    margin-top: 20px;
+}
+.dots-carrusel .dot {
+    height: 15px;
+    width: 15px;
+    background: #E5E5E5;
+    border-radius: 50px;
+    margin: 5px;
+}
+.dots-carrusel .dot.dot-selected {
+    background: #0084FF;
 }
 .sec-right {
     max-width: 572px;
@@ -197,11 +239,12 @@
     color: #000000;
 }
 .sec-buttons {
-    width: 90%;
+    width: 110%;
     top: 50%;
+    left: -5%;
     position: absolute;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 .sec-buttons button {
     width: 50px;
@@ -231,6 +274,7 @@
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
+    /* overflow: auto; */
 }
 
 .sec-resellers {
@@ -265,6 +309,21 @@
 .sec-resellers .sec-content .card .card-body:nth-child(4){
     margin-left: 20px;
 }
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+.nav-item .nav-link {
+    border-bottom: #0084FF;
+}
+.image-spw {
+    position: relative;
+}
+.spw-logo {
+    position: absolute;
+    top: 37%;
+    left: 10%;
+}
 .sec-workUs {
     width: 100%;
     display: flex;
@@ -293,4 +352,315 @@
 }
 .sec-workUs .card:nth-child(even){
     margin: 0 60px;
+}
+.modal-dialog {
+    max-width: 620px !important;
+}
+.modal-content {
+    display: flex;
+    justify-content: center;
+    box-shadow: 6px 7px 9px rgba(0, 0, 0, 0.2);
+}
+.modal-work {
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    color: #434343;
+}
+.modal-work h2 {
+    font-weight: 600;
+    font-size: 48px;
+    color: #0055EA;
+    border: none;
+}
+.modal-work h3 {
+    font-weight: 500;
+    font-size: 24px;
+    color: #434343;
+    margin-bottom: 30px;
+}
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skills {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.skills h4 {
+    font-weight: 700;
+    font-size: 20px;
+    color: #0055EA;
+    text-align: left;
+}
+.skills ul li {
+    text-align: left;
+}
+.modal-container .btn-primary{
+    width: 290px;
+    height: 44px;
+}
+
+@media screen and (max-width:1520px){
+    .sec-content.costumers {
+        width: 92%;
+    }
+}
+@media screen and (max-width:1440px){
+    .sec-content.costumers {
+        width: 92%;
+    }
+    .logos-enterprises img:nth-child(1) {
+        max-width: 144px !important;
+    }
+    .logos-enterprises img:nth-child(2) {
+        max-width: 155px !important;
+    }
+    .logos-enterprises img:nth-child(3) {
+        max-width: 159px !important;
+    }
+    .logos-enterprises img:nth-child(4) {
+        max-width: 182px !important;
+    }
+    .logos-enterprises img:nth-child(5) {
+        max-width: 164px !important;
+    }
+    .logos-enterprises img:nth-child(6) {
+        max-width: 148px !important;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .sec-content.costumers {
+        width: 92%;
+    }
+    .logos-enterprises img:nth-child(1) {
+        max-width: 134px !important;
+    }
+    .logos-enterprises img:nth-child(2) {
+        max-width: 145px !important;
+    }
+    .logos-enterprises img:nth-child(3) {
+        max-width: 149px !important;
+    }
+    .logos-enterprises img:nth-child(4) {
+        max-width: 172px !important;
+    }
+    .logos-enterprises img:nth-child(5) {
+        max-width: 154px !important;
+    }
+    .logos-enterprises img:nth-child(6) {
+        max-width: 138px !important;
+    }
+    .sec-carrousel {
+        background-image: url('../../img/fondo_casosdeexito_mobile.png');
+        flex-direction: column;
+    }
+   /*  .logos-enterprises {
+        overflow: auto;
+    } */
+    .logos-enterprises .img-content {
+        margin: 0 15px;
+    }
+    .costumers1 img,
+    .costumers2 img{
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .sec-banner-p {
+        background-image: url('../../img/Banner_principal_mobile.png');
+        background-size: contain;
+        background-attachment: initial;
+        align-items: flex-start !important;
+        padding-top: 40px;
+        height: 85vh !important;
+    }
+    .test {
+        font-size: 46px !important;
+    }
+    .text-banner svg {
+        max-width: 100px;
+    }
+    .text-banner .subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        z-index: 1000;
+    }
+    .text-description {
+        width: 95%;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .form1 {
+        max-width: 170px;
+        top: 62%;
+        opacity: .5;
+    }
+    .main-wrapper .sec-description {
+        flex-direction: column;
+        margin-top: 80px;
+        margin-bottom: 100px;
+    }
+    .simbolo-der {
+        top: -20%;
+        right: 25%;
+    }
+    .simbolo-der svg {
+        max-width: 219px !important;
+    }
+    .simbolo-izq {
+        left: 0%;
+        bottom: -20%;
+    }
+    .simbolo-izq svg {
+        max-width: 118px;
+    }
+    .main-wrapper .form2{
+        width: 90%;
+    }
+    .card-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .scroll-card {
+        width: 95%;
+        max-width: 768px !important;
+        height: 240px !important;
+    }
+    .scroll-card .card-body {
+        padding-top: 0;
+        margin-top: -25px;
+    }
+    .scroll-card .card-img-top {
+        padding-top: 15px;
+        margin-bottom: 30px;
+    }
+    .scroll-card .card-title {
+        font-size: 20px !important;
+    }
+    .scroll-card .card-text {
+        font-size: 14px;
+    }
+    .sec-awards .sec-content .card-body {
+        width: 100% !important;
+        flex-direction: column !important;
+        padding: 10px !important;
+        text-align: center;
+        justify-content: center !important;
+        align-items: center;
+    }
+    .sec-awards .cards-awards .info-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sec-awards .cards-awards .image-card {
+        margin-right: 0 !important;
+    }
+    .cards-awards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .sec-carrousel {
+        padding: 60px 20px;
+    }
+    .sec-awards .card {
+        background: #F6F6F6;
+        height: 330px;
+    }
+
+    .sec-awards .card-text {
+        font-size: 40px !important;
+        text-align: center;
+    }
+    .sec-awards .card-title {
+        text-align: center;
+        font-size: 30px !important;
+    }
+    .certificates-logos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-content: center;
+    }
+    .certificates-logos img {
+        margin: 0;
+    }
+    .certificate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sec-right {
+        padding: 25px 30px 30px 30px;
+    }
+    .sec-buttons button {
+        width: 35px;
+        height: 35px;
+    }
+    .sec-buttons button svg {
+        width: 14px;
+    }
+    .sec-buttons button:nth-child(1){
+        margin-left: 0px;
+    }
+    .sec-buttons button:nth-child(2){
+        margin-right: 0px;
+    }
+    .logos-enterprises{
+        overflow: scroll;
+    }
+    .costumers1,
+    .costumers2 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .costumers1 img,
+    .costumers2 img{
+        margin: 0 10px;
+    }
+    .card-reseller1,
+    .card-reseller3 {
+        flex-direction: column !important;
+    }
+    .card-reseller2,
+    .card-reseller4 {
+        flex-direction: column-reverse !important;
+    }
+    .spw-logo {
+        width: 77px;
+    }
+    .sec-resellers .sec-content .card .card-body:nth-child(odd) {
+        margin-left: 0;
+    }
+    .sec-resellers .sec-content .card .card-body .card-title {
+        font-size: 20px !important;
+        margin-top: 20px;
+        padding-left: 10px;
+    }
+    .sec-resellers .sec-content .card .card-body img {
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .sec-workUs .sec-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sec-workUs .card:nth-child(even){
+        margin: 40px 0;
+    }
+}
+
+@media screen and (max-width:400px){
+    .scroll-card .card-img-top {
+        margin-bottom: 0 !important;
+    }
 }

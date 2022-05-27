@@ -40,8 +40,10 @@
     "app.pages.home.sectionCostumers.label.subtitle2": "+ Clientes",
     "app.pages.home.sectionResellers.label.title": "Resellers Partners",
     "app.pages.home.sectionResellers.label.cart1-title": "Herramienta de Gestión de Contenidos",
+    "app.pages.home.sectionResellers.label.link": "Conoce más",
     "app.pages.home.sectionWorkUs.label.title": "Trabaja con Nosotros",
     "app.pages.home.sectionWorkUs.label.pmo": "PMO",
     "app.pages.home.sectionWorkUs.label.qa": "QA",
-    "app.pages.home.sectionWorkUs.label.comercial": "Comercial"
+    "app.pages.home.sectionWorkUs.label.comercial": "Comercial",
+    "app.pages.home.sectionWorkUs.label.view-profile": "Ver perfil"
 }

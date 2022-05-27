@@ -1,13 +1,20 @@
 import * as React from 'react';
-import {setCookie, getCookie} from '../../utils/cookie'
 import { useIntl } from 'react-intl'
+import {setCookie, getCookie} from '../../utils/cookie'
+import { Button } from 'react-bootstrap'
 import "./header.css"
-import Card from 'react-bootstrap/Card'
-import Nav from 'react-bootstrap/Nav'
-import Button from 'react-bootstrap/Button';
+
+import Hamburger from './hamburger';
+import NavBar from './navBar'
 const Header = () => {
     const intl = useIntl()
+    const urlParams = new URLSearchParams('services');
     const [value, setValue] = React.useState('');
+    const [open, setOpen] = React.useState(false)
+    console.log(urlParams);
+    const handleClick = () => {
+        setOpen(!open)
+    }
     const handleChange = (newValue) => {
       setValue(newValue);
       setCookie('lang',newValue);
@@ -19,10 +26,10 @@ const Header = () => {
     };
     
     return (
-        <div className='header-content'>
+        <div className='header-content'>   
             <div className="logo">
             <svg width="136" height="34" viewBox="0 0 136 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_286_13570)">
+                <g clipPath="url(#clip0_286_13570)">
                 <path d="M6.77952 18.4952L3.37952 8.09036H0L4.52651 21.9976H6.77952H9.03253L13.559 8.09036H10.1795L6.77952 18.4952Z" fill="white"/>
                 <path d="M19.1916 8.09036H15.853V21.9976H19.1916V8.09036Z" fill="white"/>
                 <path d="M32.6277 9.91324C32.1976 9.36022 31.706 8.95059 31.194 8.64336C30.6819 8.35661 30.1904 8.13131 29.7397 8.00842C29.2891 7.86504 28.8795 7.8036 28.5518 7.78312C28.2036 7.76263 28.0193 7.76263 27.9578 7.76263C27.8964 7.76263 27.6916 7.76263 27.3638 7.78312C27.0361 7.8036 26.647 7.88553 26.1759 8.00842C25.7253 8.15179 25.2337 8.35661 24.7217 8.64336C24.2096 8.9301 23.7385 9.36022 23.2879 9.91324C22.8373 10.4662 22.4891 11.1626 22.2024 11.9819C21.9157 12.8217 21.7723 13.8458 21.7723 15.0747V22.0181H25.1108V15.0747C25.1108 14.665 25.1518 14.2554 25.2132 13.8458C25.2952 13.4156 25.4181 13.047 25.6229 12.6988C25.8277 12.3506 26.1144 12.0638 26.4831 11.8385C26.8518 11.6132 27.3229 11.4903 27.9373 11.4903C28.5313 11.4903 29.0229 11.6132 29.3916 11.8385C29.7602 12.0638 30.047 12.3506 30.2313 12.6988C30.4361 13.047 30.5795 13.4361 30.641 13.8458C30.7024 14.2759 30.7434 14.6855 30.7434 15.0747V22.0181H34.0819V15.0747C34.0819 13.8458 33.9385 12.8217 33.6518 11.9819C33.4265 11.1422 33.0578 10.4662 32.6277 9.91324Z" fill="white"/>
@@ -42,53 +49,48 @@ const Header = () => {
                 </defs>
             </svg>
             </div>
-            <Card style={{border:"none"}}>
-            <Card.Header style={{background:"#003EDF",border:"none"}} text="dark">
-                <Nav variant="line" defaultActiveKey="#first" text="light">
-                <Nav.Item>
-                    <Nav.Link href="#know-us" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.knowus'})}</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="#services" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.services'})}</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="#partners" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.partners'})}</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="#awards-and-certifications" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.awards'})}</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="#technologies" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.technologies'})}</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="#costumers" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.customers'})}</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="#resellers" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.resellers'})}</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="#work-with-us" style={{color:"#FFFFFF"}}>{intl.formatMessage({id: 'app.components.header.label.work'})}</Nav.Link>
-                </Nav.Item>
-                </Nav>       
-            </Card.Header>
-            </Card>
-            <div className='btn-inter'>
-                <Button variant="light">{intl.formatMessage({id: 'app.components.header.label.contact-us'})}</Button>
-                <div className="languages">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.99995 12.6566C10.124 12.6566 12.6565 10.124 12.6565 7.00001C12.6565 3.87598 10.124 1.34344 6.99995 1.34344C3.87591 1.34344 1.34338 3.87598 1.34338 7.00001C1.34338 10.124 3.87591 12.6566 6.99995 12.6566Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M1.34338 7H12.6565" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7.00005 1.34344C8.41492 2.89241 9.21898 4.90257 9.26268 7.00001C9.21898 9.09745 8.41492 11.1076 7.00005 12.6566C5.58519 11.1076 4.78112 9.09745 4.73743 7.00001C4.78112 4.90257 5.58519 2.89241 7.00005 1.34344V1.34344Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+            
+            <NavBar open={open} handleClick={handleClick}/>
+            {
+                window.screen.width > 768 ? (
+                    <div className='btn-inter'>
+                        <Button variant="light">{intl.formatMessage({id: 'app.components.header.label.contact-us'})}</Button>   
+                        <div className="languages">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.99995 12.6566C10.124 12.6566 12.6565 10.124 12.6565 7.00001C12.6565 3.87598 10.124 1.34344 6.99995 1.34344C3.87591 1.34344 1.34338 3.87598 1.34338 7.00001C1.34338 10.124 3.87591 12.6566 6.99995 12.6566Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M1.34338 7H12.6565" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M7.00005 1.34344C8.41492 2.89241 9.21898 4.90257 9.26268 7.00001C9.21898 9.09745 8.41492 11.1076 7.00005 12.6566C5.58519 11.1076 4.78112 9.09745 4.73743 7.00001C4.78112 4.90257 5.58519 2.89241 7.00005 1.34344V1.34344Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
 
-                <div className="languages1">
-                    <button onClick={()=>{handleChange('es-ES')}} className={getCookie('lang')==='es-ES'?'activo':''}>ES</button>
-                </div>/
-                <div className="languages2">
-                    <button onClick={()=>{handleChange('en-US')}} className={getCookie('lang')==='en-US'?'activo':''}>EN</button>
-                </div>
-            </div>
-            </div>
+                            <div className="languages1">
+                                <button onClick={()=>{handleChange('es-ES')}} className={getCookie('lang')==='es-ES'?'activo':''}>ES</button>
+                            </div>/
+                            <div className="languages2">
+                                <button onClick={()=>{handleChange('en-US')}} className={getCookie('lang')==='en-US'?'activo':''}>EN</button>
+                            </div>
+                        </div>
+                        
+                    </div> 
+                ):(
+                    <div className='btn-inter'>   
+                        <div className="languages">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.99995 12.6566C10.124 12.6566 12.6565 10.124 12.6565 7.00001C12.6565 3.87598 10.124 1.34344 6.99995 1.34344C3.87591 1.34344 1.34338 3.87598 1.34338 7.00001C1.34338 10.124 3.87591 12.6566 6.99995 12.6566Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M1.34338 7H12.6565" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M7.00005 1.34344C8.41492 2.89241 9.21898 4.90257 9.26268 7.00001C9.21898 9.09745 8.41492 11.1076 7.00005 12.6566C5.58519 11.1076 4.78112 9.09745 4.73743 7.00001C4.78112 4.90257 5.58519 2.89241 7.00005 1.34344V1.34344Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+
+                            <div className="languages1">
+                                <button onClick={()=>{handleChange('es-ES')}} className={getCookie('lang')==='es-ES'?'activo':''}>ES</button>
+                            </div>/
+                            <div className="languages2">
+                                <button onClick={()=>{handleChange('en-US')}} className={getCookie('lang')==='en-US'?'activo':''}>EN</button>
+                            </div>
+                        </div>
+                        <Hamburger open={open} handleClick={handleClick}/>
+                    </div>
+                )
+            }
             
         </div>
     )

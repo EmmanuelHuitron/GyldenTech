@@ -1,5 +1,7 @@
 import React from "react"
 import { useIntl } from "react-intl";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Carrousel from "../../../components/Carrousel-Costumers"
 
 import costu1 from "../../../img/champion-logo 1.png";
@@ -19,13 +21,14 @@ import costu14 from "../../../img/GoJiraf.png";
 
 const Technologies = () => {
     const intl = useIntl();
+    AOS.init();
     const images = [
         "Casos-de-exito_Nadro.png", "Casos-de-exito_Modelorama.png", "Casos-de-exito_Ekt.png", "Casos-de-exito_Xiaomi.png", "Casos-de-exito_LaMarina.png", "Casos-de-exito_Essity.png"
     ]
     return (
         <div className="sec-costumers" id="costumers">
             <div className="sec-title">
-                <h2>
+                <h2 data-aos="slide-up" data-aos-duration="1000" data-aos-once="true">
                     {intl.formatMessage({
                         id: "app.pages.home.sectionCostumers.label.title",
                     })}
