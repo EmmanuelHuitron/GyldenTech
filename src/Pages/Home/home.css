@@ -657,6 +657,14 @@
     .sec-workUs .card:nth-child(even){
         margin: 40px 0;
     }
+    .skills {
+        flex-direction: column;
+    }
+    .skills-left h4,
+    .skills-right h4 {
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width:400px){

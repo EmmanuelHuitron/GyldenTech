@@ -1,4 +1,3 @@
-import * as React from 'react';
 import SectionPrincipal from './Section-Principal'
 import SectionServices from './Section-Services'
 import SectionPartners from './Section-Partners'
@@ -10,18 +9,17 @@ import SectionWorkus from './Section-WorkUs'
 import './home.css'
 
 const Home = () => {
-    
-    return (
-        <>
-            <SectionPrincipal />
-            <SectionServices />
-            <SectionPartners />
-            <SectionAwards />
-            <SectionTechnologies />
-            <SectionCostumers />
-            <SectionResellers />
-            <SectionWorkus />
-        </>
-    )
+  return (
+    <>
+      <SectionPrincipal />
+      <SectionServices />
+      <SectionPartners />
+      <SectionAwards />
+      <SectionTechnologies />
+      <SectionCostumers />
+      <SectionResellers />
+      <SectionWorkus />
+    </>
+  )
 }
-export default Home;
+export default Home

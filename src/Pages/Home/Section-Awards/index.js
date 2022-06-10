@@ -1,38 +1,54 @@
-import React from "react";
-import { useIntl } from "react-intl";
-import { Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-/* import scrollreveal from "scrollreveal"; */
+import { useIntl } from 'react-intl'
+import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-import cert1 from "../../../img/CERTIFIED-VTEX-Project.png";
-import cert2 from "../../../img/CERTIFIED-VTEX-Fronted.png";
-import cert3 from "../../../img/CERTIFIED-VTEX-Reseller.png";
-import cert4 from "../../../img/CERTIFIED-VTEX-Suport.png";
-import cert5 from "../../../img/VTEX IO_Certified 1.png";
+import cert1 from '../../../img/CERTIFIED-VTEX-Project.png'
+import cert2 from '../../../img/CERTIFIED-VTEX-Fronted.png'
+import cert3 from '../../../img/CERTIFIED-VTEX-Reseller.png'
+import cert4 from '../../../img/CERTIFIED-VTEX-Suport.png'
+import cert5 from '../../../img/VTEX IO_Certified 1.png'
 const Awards = () => {
-  AOS.init();
-  const intl = useIntl();
-  
+  AOS.init()
+  const intl = useIntl()
+
   return (
     <div className="sec-awards" id="awards-and-certifications">
-      <div className="sec-title" data-aos="slide-up" data-aos-duration="1000" data-aos-once="true">
+      <div
+        className="sec-title"
+        data-aos="slide-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
         <h2>
           {intl.formatMessage({
-            id: "app.pages.home.sectionAwards.label.title",
+            id: 'app.pages.home.sectionAwards.label.title',
           })}
         </h2>
       </div>
       <div
         className="sec-content"
         style={{
-          width: "90%"
+          width: '90%',
         }}
       >
         <div className="cards-awards">
-          <Card className="scroll-card1" data-aos={window.screen.width>768?"fade-right":"fade-down"} data-aos-duration="1000" data-aos-once="true">
-            <CardBody style={{width: "590px", display: "flex", flexDirection: "row", justifyContent: "flex-start", padding: "40px 30px"}}>
-              <div className="image-card" style={{marginRight: "30px"}}>
+          <Card
+            className="scroll-card1"
+            data-aos={window.screen.width > 768 ? 'fade-right' : 'fade-down'}
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            <CardBody
+              style={{
+                width: '590px',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'flex-start',
+                padding: '40px 30px',
+              }}
+            >
+              <div className="image-card" style={{ marginRight: '30px' }}>
                 <svg
                   width="118"
                   height="118"
@@ -52,25 +68,53 @@ const Awards = () => {
                 </svg>
               </div>
               <div className="info-card">
-                <CardText style={{fontWeight: "700",fontSize: "48px", color:"#F71963", marginBottom: "0"}}>
+                <CardText
+                  style={{
+                    fontWeight: '700',
+                    fontSize: '48px',
+                    color: '#F71963',
+                    marginBottom: '0',
+                  }}
+                >
                   2021
                 </CardText>
-                <CardSubtitle className="mb-2" tag="h6" style={{fontWeight: "600",fontSize: "24px"}}>
+                <CardSubtitle
+                  className="mb-2"
+                  tag="h6"
+                  style={{ fontWeight: '600', fontSize: '24px' }}
+                >
                   {intl.formatMessage({
-                    id: "app.pages.home.sectionAwards.label.card1-sutitle",
-                  })}<span> VTEX Awards</span>
+                    id: 'app.pages.home.sectionAwards.label.card1-sutitle',
+                  })}
+                  <span> VTEX Awards</span>
                 </CardSubtitle>
-                <CardTitle tag="h5" style={{fontWeight: "600",fontSize: "35px"}}>
+                <CardTitle
+                  tag="h5"
+                  style={{ fontWeight: '600', fontSize: '35px' }}
+                >
                   {intl.formatMessage({
-                    id: "app.pages.home.sectionAwards.label.card1-title",
+                    id: 'app.pages.home.sectionAwards.label.card1-title',
                   })}
                 </CardTitle>
               </div>
             </CardBody>
           </Card>
-          <Card className="scroll-card2" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">
-            <CardBody style={{width: "590px", display: "flex", flexDirection: "row", justifyContent: "flex-start", padding: "40px 30px"}}>
-              <div className="image-card" style={{marginRight: "30px"}}>
+          <Card
+            className="scroll-card2"
+            data-aos="fade-down"
+            data-aos-duration="1500"
+            data-aos-once="true"
+          >
+            <CardBody
+              style={{
+                width: '590px',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'flex-start',
+                padding: '40px 30px',
+              }}
+            >
+              <div className="image-card" style={{ marginRight: '30px' }}>
                 <svg
                   width="118"
                   height="118"
@@ -90,25 +134,53 @@ const Awards = () => {
                 </svg>
               </div>
               <div className="info-card">
-                <CardText style={{fontWeight: "700",fontSize: "48px", color:"#F71963", marginBottom: "0"}}>
+                <CardText
+                  style={{
+                    fontWeight: '700',
+                    fontSize: '48px',
+                    color: '#F71963',
+                    marginBottom: '0',
+                  }}
+                >
                   2020
                 </CardText>
-                <CardSubtitle className="mb-2" tag="h6" style={{fontWeight: "600",fontSize: "24px"}}>
+                <CardSubtitle
+                  className="mb-2"
+                  tag="h6"
+                  style={{ fontWeight: '600', fontSize: '24px' }}
+                >
                   {intl.formatMessage({
-                    id: "app.pages.home.sectionAwards.label.card2-sutitle",
-                  })}<span> VTEX</span>
+                    id: 'app.pages.home.sectionAwards.label.card2-sutitle',
+                  })}
+                  <span> VTEX</span>
                 </CardSubtitle>
-                <CardTitle tag="h5" style={{fontWeight: "600",fontSize: "36px"}}>
+                <CardTitle
+                  tag="h5"
+                  style={{ fontWeight: '600', fontSize: '36px' }}
+                >
                   {intl.formatMessage({
-                    id: "app.pages.home.sectionAwards.label.card2-title",
+                    id: 'app.pages.home.sectionAwards.label.card2-title',
                   })}
                 </CardTitle>
               </div>
             </CardBody>
           </Card>
-          <Card className="scroll-card3" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
-            <CardBody style={{width: "590px", display: "flex", flexDirection: "row", justifyContent: "flex-start", padding: "40px 30px"}}>
-              <div className="image-card" style={{marginRight: "30px"}}>
+          <Card
+            className="scroll-card3"
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            data-aos-once="true"
+          >
+            <CardBody
+              style={{
+                width: '590px',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'flex-start',
+                padding: '40px 30px',
+              }}
+            >
+              <div className="image-card" style={{ marginRight: '30px' }}>
                 <svg
                   width="118"
                   height="118"
@@ -128,25 +200,53 @@ const Awards = () => {
                 </svg>
               </div>
               <div className="info-card">
-                <CardText style={{fontWeight: "700",fontSize: "48px", color:"#F71963", marginBottom: "0"}}>
+                <CardText
+                  style={{
+                    fontWeight: '700',
+                    fontSize: '48px',
+                    color: '#F71963',
+                    marginBottom: '0',
+                  }}
+                >
                   2020
                 </CardText>
-                <CardSubtitle className="mb-2" tag="h6" style={{fontWeight: "600",fontSize: "24px"}}>
+                <CardSubtitle
+                  className="mb-2"
+                  tag="h6"
+                  style={{ fontWeight: '600', fontSize: '24px' }}
+                >
                   {intl.formatMessage({
-                    id: "app.pages.home.sectionAwards.label.card3-sutitle",
-                  })}<span> VTEX Awards</span>
+                    id: 'app.pages.home.sectionAwards.label.card3-sutitle',
+                  })}
+                  <span> VTEX Awards</span>
                 </CardSubtitle>
-                <CardTitle tag="h5" style={{fontWeight: "600",fontSize: "36px"}}>
+                <CardTitle
+                  tag="h5"
+                  style={{ fontWeight: '600', fontSize: '36px' }}
+                >
                   {intl.formatMessage({
-                    id: "app.pages.home.sectionAwards.label.card3-title",
+                    id: 'app.pages.home.sectionAwards.label.card3-title',
                   })}
                 </CardTitle>
               </div>
             </CardBody>
           </Card>
-          <Card className="scroll-card4" data-aos="fade-down" data-aos-duration="2500" data-aos-once="true">
-            <CardBody style={{width: "590px", display: "flex", flexDirection: "row", justifyContent: "flex-start", padding: "40px 30px"}}>
-              <div className="image-card" style={{marginRight: "30px"}}>
+          <Card
+            className="scroll-card4"
+            data-aos="fade-down"
+            data-aos-duration="2500"
+            data-aos-once="true"
+          >
+            <CardBody
+              style={{
+                width: '590px',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'flex-start',
+                padding: '40px 30px',
+              }}
+            >
+              <div className="image-card" style={{ marginRight: '30px' }}>
                 <svg
                   width="118"
                   height="118"
@@ -166,17 +266,32 @@ const Awards = () => {
                 </svg>
               </div>
               <div className="info-card">
-                <CardText style={{fontWeight: "700",fontSize: "48px", color:"#F71963", marginBottom: "0"}}>
+                <CardText
+                  style={{
+                    fontWeight: '700',
+                    fontSize: '48px',
+                    color: '#F71963',
+                    marginBottom: '0',
+                  }}
+                >
                   2019
                 </CardText>
-                <CardSubtitle className="mb-2" tag="h6" style={{fontWeight: "600",fontSize: "24px"}}>
+                <CardSubtitle
+                  className="mb-2"
+                  tag="h6"
+                  style={{ fontWeight: '600', fontSize: '24px' }}
+                >
                   {intl.formatMessage({
-                    id: "app.pages.home.sectionAwards.label.card4-sutitle",
-                  })}<span> VTEX Awards</span>
+                    id: 'app.pages.home.sectionAwards.label.card4-sutitle',
+                  })}
+                  <span> VTEX Awards</span>
                 </CardSubtitle>
-                <CardTitle tag="h5" style={{fontWeight: "600",fontSize: "36px"}}>
+                <CardTitle
+                  tag="h5"
+                  style={{ fontWeight: '600', fontSize: '36px' }}
+                >
                   {intl.formatMessage({
-                    id: "app.pages.home.sectionAwards.label.card4-title",
+                    id: 'app.pages.home.sectionAwards.label.card4-title',
                   })}
                 </CardTitle>
               </div>
@@ -184,24 +299,60 @@ const Awards = () => {
           </Card>
         </div>
         <div className="certificate">
-            <div className="title-certificate">
-              <h3>
-                {intl.formatMessage({
-                  id: "app.pages.home.sectionAwards.label.title-certificate",
-                })}<span> VTEX</span>
-              </h3>
-            </div>
-            <div className="certificates-logos">
-                <img className="cert1" src={cert1} alt="cert1" data-aos="fade-down" data-aos-duration="500" data-aos-once="true"/>
-                <img className="cert2" src={cert2} alt="cert2" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true"/>
-                <img className="cert3" src={cert3} alt="cert3" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true"/>
-                <img className="cert4" src={cert4} alt="cert4" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true"/>
-                <img className="cert5" src={cert5} alt="cert5" data-aos="fade-down" data-aos-duration="2500" data-aos-once="true"/>
-            </div>
-        </div>          
+          <div className="title-certificate">
+            <h3>
+              {intl.formatMessage({
+                id: 'app.pages.home.sectionAwards.label.title-certificate',
+              })}
+              <span> VTEX</span>
+            </h3>
+          </div>
+          <div className="certificates-logos">
+            <img
+              className="cert1"
+              src={cert1}
+              alt="cert1"
+              data-aos="fade-down"
+              data-aos-duration="500"
+              data-aos-once="true"
+            />
+            <img
+              className="cert2"
+              src={cert2}
+              alt="cert2"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              data-aos-once="true"
+            />
+            <img
+              className="cert3"
+              src={cert3}
+              alt="cert3"
+              data-aos="fade-down"
+              data-aos-duration="1500"
+              data-aos-once="true"
+            />
+            <img
+              className="cert4"
+              src={cert4}
+              alt="cert4"
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              data-aos-once="true"
+            />
+            <img
+              className="cert5"
+              src={cert5}
+              alt="cert5"
+              data-aos="fade-down"
+              data-aos-duration="2500"
+              data-aos-once="true"
+            />
+          </div>
+        </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Awards;
+export default Awards
