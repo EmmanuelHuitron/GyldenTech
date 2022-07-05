@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { helpHttp } from '../helpers/helpHttp'
 
-export const useForm = (initialForm, validateForm) => {
+export const useForm = (initialForm, validateForm, urlSend) => {
   const [form, setForm] = useState(initialForm)
   const [errors, setErrors] = useState({})
   const [loading, setLoading] = useState(false)
@@ -28,7 +28,7 @@ export const useForm = (initialForm, validateForm) => {
     if (Object.keys(errors).length === 0) {
       setLoading(true)
       helpHttp()
-        .post('https://formsubmit.co/proyuo1000@gmail.com', {
+        .post(urlSend, {
           body: form,
           headers: {
             'Content-Type': 'application/json',

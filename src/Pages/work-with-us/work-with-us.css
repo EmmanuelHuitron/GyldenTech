@@ -1,0 +1,21 @@
+.work-with-us {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0 50px 0;
+}
+.work-with-us-content {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 60px;
+}
+.work-with-us-content h2 {
+    font-weight: 600;
+    font-size: 36px;
+}
+.work-with-us-content h4 {
+    font-weight: 400;
+    font-size: 18px;
+}
