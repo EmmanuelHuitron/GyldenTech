@@ -7,6 +7,7 @@ import { Input, Label, Button } from 'reactstrap'
 import { useForm } from '../../hooks/useForm'
 import Loader from '../../components/Loader'
 import Message from '../../components/Message'
+import { jobsObj } from '../../components/Modals/Modal-Work-With-Us/jobs'
 import './work-with-us.css'
 import './input-file.css'
 const initialForm = {
@@ -112,9 +113,15 @@ const WorkWithUs = () => {
                 placeholder="Selecciona una opción"
                 required
               >
-                <option>PMO</option>
-                <option>QA</option>
-                <option>Comercial</option>
+                {jobsObj.map(({ name }, i) => {
+                  return (
+                    <>
+                      <option key={i} value={name}>
+                        {name}
+                      </option>
+                    </>
+                  )
+                })}
               </Input>
               {errors.position && <p style={styles}>{errors.position}</p>}
               <Label for="email">
