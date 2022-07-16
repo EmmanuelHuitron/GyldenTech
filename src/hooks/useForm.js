@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { helpHttp } from '../helpers/helpHttp'
 
-export const useForm = (initialForm, validateForm, urlSend) => {
+export const useForm = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm)
   const [errors, setErrors] = useState({})
   const [loading, setLoading] = useState(false)
@@ -15,7 +15,6 @@ export const useForm = (initialForm, validateForm, urlSend) => {
       [name]: value,
     })
   }
-
   const handleBlur = e => {
     handleChange(e)
     setErrors(validateForm(form))
@@ -28,13 +27,19 @@ export const useForm = (initialForm, validateForm, urlSend) => {
     if (Object.keys(errors).length === 0) {
       setLoading(true)
       helpHttp()
-        .post(urlSend, {
-          body: form,
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
+        .post(
+          'https://api.vinneren.com.mx/forms-v1/vinnerenContact/contactUs',
+          {
+            body: JSON.stringify(form),
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept-Encoding': 'gzip, deflate, br',
+              Connection: 'keep-alive',
+              ApiKey:
+                'TpQFV1OVMGg7HwnSMZ9IPXtZUBt7wVoTWp1mTL9W3Skiu3qrghAErESRemSAW6oj',
+            },
           },
-        })
+        )
         .then(res => {
           setLoading(false)
           setResponse(true)
@@ -48,7 +53,6 @@ export const useForm = (initialForm, validateForm, urlSend) => {
 
   return {
     form,
-
     errors,
     loading,
     response,
