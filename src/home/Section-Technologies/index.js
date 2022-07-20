@@ -1,7 +1,7 @@
 import { useIntl } from 'react-intl'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import SliderTechno from '../../../components/Sliders/Slide-Techno'
+import SliderTechno from '../../components/Sliders/Slide-Techno'
 
 import tech1 from '../../img/Amazon.png'
 import tech2 from '../../img/HTML.png'
