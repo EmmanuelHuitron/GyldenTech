@@ -1,7 +1,7 @@
 import { useIntl } from 'react-intl'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import SliderPartner from '../../../components/Sliders/Slide-Partners'
+import SliderPartner from '../../components/Sliders/Slide-Partners'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
