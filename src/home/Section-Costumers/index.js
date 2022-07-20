@@ -1,7 +1,7 @@
 import { useIntl } from 'react-intl'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Carrousel from '../../../components/Carrousel-Costumers'
+import Carrousel from '../../components/Carrousel-Costumers'
 
 import costu1 from '../../img/champion-logo 1.png'
 import costu2 from '../../img/FarmaTodo 1.png'
