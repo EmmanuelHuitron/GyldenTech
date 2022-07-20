@@ -3,9 +3,9 @@ import { useIntl } from 'react-intl'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { Card, CardImg, CardBody, CardTitle, CardText, Modal } from 'reactstrap'
-import ModalWork from '../../../components/Modals/Modal-Work-With-Us'
-import { jobsObj } from '../../../components/Modals/Modal-Work-With-Us/jobs'
-import work1 from '../../../img/PMO.png'
+import ModalWork from '../../components/Modals/Modal-Work-With-Us'
+import { jobsObj } from '../../components/Modals/Modal-Work-With-Us/jobs'
+import work1 from '../../img/PMO.png'
 /* import work2 from '../../../img/QA.png'
 import work3 from '../../../img/Comercial.png' */
 

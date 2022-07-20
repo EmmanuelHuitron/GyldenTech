@@ -10,11 +10,11 @@ import {
   CardText,
 } from 'reactstrap'
 
-import card1 from '../../../img/ecommerce.png'
-import card2 from '../../../img/Soporte.png'
-import card3 from '../../../img/Consultoria y Planeacion.png'
-import card4 from '../../../img/Payment Providers.png'
-import card5 from '../../../img/UXUI.png'
+import card1 from '../../img/ecommerce.png'
+import card2 from '../../img/Soporte.png'
+import card3 from '../../img/Consultoria y Planeacion.png'
+import card4 from '../../img/Payment Providers.png'
+import card5 from '../../img/UXUI.png'
 /* import scrollreveal from "scrollreveal"; */
 
 const Services = () => {

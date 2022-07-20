@@ -3,11 +3,11 @@ import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-import cert1 from '../../../img/CERTIFIED-VTEX-Project.png'
-import cert2 from '../../../img/CERTIFIED-VTEX-Fronted.png'
-import cert3 from '../../../img/CERTIFIED-VTEX-Reseller.png'
-import cert4 from '../../../img/CERTIFIED-VTEX-Suport.png'
-import cert5 from '../../../img/VTEX IO_Certified 1.png'
+import cert1 from '../../img/CERTIFIED-VTEX-Project.png'
+import cert2 from '../../img/CERTIFIED-VTEX-Fronted.png'
+import cert3 from '../../img/CERTIFIED-VTEX-Reseller.png'
+import cert4 from '../../img/CERTIFIED-VTEX-Suport.png'
+import cert5 from '../../img/VTEX IO_Certified 1.png'
 const Awards = () => {
   AOS.init()
   const intl = useIntl()

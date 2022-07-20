@@ -3,12 +3,12 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import SliderTechno from '../../../components/Sliders/Slide-Techno'
 
-import tech1 from '../../../img/Amazon.png'
-import tech2 from '../../../img/HTML.png'
-import tech3 from '../../../img/Java.png'
-import tech4 from '../../../img/Mongo.png'
-import tech5 from '../../../img/mysql 1.png'
-import tech6 from '../../../img/Node.png'
+import tech1 from '../../img/Amazon.png'
+import tech2 from '../../img/HTML.png'
+import tech3 from '../../img/Java.png'
+import tech4 from '../../img/Mongo.png'
+import tech5 from '../../img/mysql 1.png'
+import tech6 from '../../img/Node.png'
 
 const Technologies = () => {
   const intl = useIntl()

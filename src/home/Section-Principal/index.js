@@ -1,8 +1,8 @@
 import { useIntl } from 'react-intl'
 import { fadeIn, slideInRight, slideInLeft, slideInUp } from 'react-animations'
 import Radium, { StyleRoot } from 'radium'
-import forma1 from '../../../img/forma1.png'
-import forma2 from '../../../img/forma2.png'
+import forma1 from '../../img/forma1.png'
+import forma2 from '../../img/forma2.png'
 const styles = {
   fadeIn: {
     animation: 'x 1s',
