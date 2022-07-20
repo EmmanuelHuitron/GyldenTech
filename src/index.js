@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+/* import { BrowserRouter } from 'react-router-dom' */
 import { IntlProvider } from 'react-intl'
 import { getCookie, setCookie } from './utils/cookie'
 import './index.css'
@@ -28,9 +28,7 @@ if (!local) {
 ReactDOM.render(
   <React.StrictMode>
     <IntlProvider locale={local} messages={messages} defaultLocale="es-ES">
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <App />
     </IntlProvider>
   </React.StrictMode>,
   document.getElementById('root'),
