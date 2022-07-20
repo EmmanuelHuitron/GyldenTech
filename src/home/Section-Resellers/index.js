@@ -11,7 +11,7 @@ import {
 } from 'reactstrap'
 
 import rese1 from '../../img/Loolu.png'
-import logo1 from '../../../img/Loolu-logo.png'
+import logo1 from '../../img/Loolu-logo.png'
 import rese2 from '../../img/Mdr.png'
 import logo2 from '../../img/Mdr-logo.png'
 import rese3 from '../../img/spw.png'
