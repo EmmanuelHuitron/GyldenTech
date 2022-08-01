@@ -1,7 +1,9 @@
 export const jobsObj = [
   {
     name: 'Desarrollador Front End',
-    FuncionesConocimientos: '',
+    image: 'FrontEnd.png',
+    FuncionesConocimientos:
+      'Este candidato tiene la capacidad  de trabajar con un equipo técnico altamente energizado,  Tiene una sólida comprensión de la gestión de dependencias de código, análisis de casos de prueba y configuración de contenedores, registro y análisis.',
     SoftSkills: [
       'Trabajo en equipo',
       'Proactividad',
@@ -13,8 +15,7 @@ export const jobsObj = [
       'alto sentido de resultados',
     ],
     TechSkills: [
-      'Javascript',
-      'React',
+      'Javascript, React',
       'Typescript',
       'CSS',
       'SASS',
@@ -30,7 +31,9 @@ export const jobsObj = [
   },
   {
     name: 'Desarrollador Back End',
-    FuncionesConocimientos: '',
+    image: 'BackEnd.png',
+    FuncionesConocimientos:
+      'Este candidato tiene la capacidad  de trabajar con un equipo técnico altamente energizado,  Tiene una sólida comprensión de la gestión de dependencias de código, análisis de casos de prueba y configuración de contenedores, registro y análisis.',
     SoftSkills: [
       'Trabajo en equipo, proactividad',
       'buena organización y de trabajo bajo presión',
@@ -70,7 +73,9 @@ export const jobsObj = [
   },
   {
     name: 'Project Manager',
-    FuncionesConocimientos: '',
+    image: 'PMO.png',
+    FuncionesConocimientos:
+      'En otras palabras, es el perfil que coordina el trabajo del equipo para cumplir con los objetivos. Tiene la capacidad de planeación, organización, coordinación y control de trabajo. Alto conocimiento en retail, eCommerce y omnicanalidad.',
     SoftSkills: [
       'Trabajo en equipo',
       'Liderazgo, proactividad',
@@ -85,8 +90,9 @@ export const jobsObj = [
   },
   {
     name: 'Product Manager',
+    image: 'ProductManager.png',
     FuncionesConocimientos:
-      "Jira , Excel avanzado, Proyect, PPT Excelentes habilidades organizativas, analíticas y de comunicación y atención al detalle. Capacidad comprobada para influir en equipos multifuncionales sin autoridad formal. Capacidad comprobada para crear requisitos/diseños funcionales, esquemas, demostraciones de productos y pruebas de conceptos para nuevas ideas de productos y eventos de marketing. Conocimiento práctico de la tecnología web front-end moderna, incluidos HTML, javascript, React y CSS Profesionalismo, dedicación y capacidad para trabajar en un entorno de equipo colaborativo. Es muy importante tener ojo para los detalles, así como un gran instinto de diseño, habiendo trabajado en estrecha colaboración con UX para crear grandes experiencias en el pasado. Capacidad para priorizar y decir cortésmente 'No' a una letanía de buenas ideas que distraen a su equipo de trabajar en grandes ideas. Con conocimientos en tecnologías, plataformas de colaboración.",
+      'El rol de Product Manager tiene responsabilidades tanto de entrada como de salida. Las responsabilidades entrantes consisten en trabajar con el equipo de tecnología para ofrecer nuevas herramientas y aplicaciones de análisis  en la nube. Las responsabilidades salientes incluyen reunirse con clientes, prospectos (empresas y PYMES) y analistas de la industria para analizar los requisitos del producto.',
     SoftSkills: [
       'Trabajo en equipo',
       'Liderazgo, proactividad',
@@ -97,10 +103,11 @@ export const jobsObj = [
       'capacidad de gestión de conflicto',
       'alto sentido de resultados',
     ],
-    TechSkills: [],
+    TechSkills: ['Jira', 'Excel avanzado', 'Proyect', 'PPT'],
   },
   {
     name: 'Sales Rep',
+    image: 'SalesRep.png',
     FuncionesConocimientos:
       'Experiencia en ventas, preferiblemente dentro de una organización,experiencia en gestión de ventas,comprensión sólida de las aplicaciones y la tecnología de colaboración, Historial consistente de venta de software en cuentas comerciales y logro de objetivos personales y de equipo, Capacidad para hacer crecer el negocio de manera estratégica, incluida la generación de demanda, Excelentes habilidades de coaching, escritura, descubrimiento y presentación, Historia de prosperar en un entorno que cambia rápidamente, Entusiasmo por aumentar la felicidad del cliente y profundizar las relaciones con los clientes, Cómodo y dispuesto a ser un colaborador práctico, Licenciatura requerida.',
     SoftSkills: [
@@ -119,7 +126,9 @@ export const jobsObj = [
   },
   {
     name: 'Head Técnico',
-    FuncionesConocimientos: '',
+    image: 'QA.png',
+    FuncionesConocimientos:
+      'El rol de Head técnico de células tiene responsabilidades, técnicas, orientación y propuesta de mejores prácticas tecnológicas así como brindar soluciones de clase mundial a los clientes donde se encuentre instalada una célula de vinnenen con los clientes.',
     SoftSkills: [
       'Trabajo en equipo',
       'Liderazgo',
@@ -128,8 +137,7 @@ export const jobsObj = [
       'excelente comunicación',
       'capacidades analíticas y de resolución de problemas',
       'paciencia y perseverancia para resolver problemas',
-      'capacidad de gestión de conflicto',
-      'alto sentido de resultados',
+      'capacidad de gestión de conflicto, alto sentido de resultados',
     ],
     TechSkills: [
       'Javascript',
@@ -144,13 +152,13 @@ export const jobsObj = [
       'Jquery',
       'Booststrap',
       'ES6',
-      'Despliegue de funcionalidades mediante integración con sistemas backend',
-      'alto conocimiento en eCommerce y construcción de sistemas empresariales',
     ],
   },
   {
     name: 'Quality Assurance',
-    FuncionesConocimientos: '',
+    image: 'QA.png',
+    FuncionesConocimientos:
+      'Diseño y creación de herramientas de Software que permitan probar las funcionalidades y certificar la calidad de los productos generadas por el área de desarrollo de la empresa.',
     SoftSkills: [
       'Trabajo en equipo',
       'proactividad',
@@ -161,33 +169,14 @@ export const jobsObj = [
       'capacidad de gestión de conflicto',
       'alto sentido de resultados',
     ],
-    TechSkills: [
-      'Diseño y creación de herramientas de Software que permitan probar las funcionalidades y certificar la calidad de los productos generadas por el área de desarrollo de la empresa',
-      'Preparación de ambientes para verificación de los productos desarrollados',
-      'Generación de procesos que permitan probar rápida y confiablemente las plataformas desarrolladas por la empresa (automatización)',
-      'Alta interacción con áreas de Desarrollo y Soporte de la empresa y con los clientes',
-      'Instalación de las aplicaciones en los ambientes de producción del cliente',
-      'Asegurar que el producto se desarrolle correctamente y debe comprobar que se cumplen las expectativas del usuario que va a utilizar dicho producto',
-      'Plan de pruebas, gestionar los riesgos',
-      'definir los criterios de aceptación',
-      'gestionar defectos y pruebas exploratoria',
-      'Pruebas de regresión y análisis de código',
-      'Fundamental saber el estado en el que se encuentra cada tarea del proyecto en cada momento',
-    ],
+    TechSkills: [],
   },
   {
     name: 'Scrum Master',
-    FuncionesConocimientos: [
-      'Entre las funciones más relevantes de un Scrum Master se encuentran:',
-      '● Análisis de los proyectos a su cargo (tiempo, alcance y calidad)',
-      '● Estimar los recursos y los plazos necesarios',
-      '● Manejo y administración del equipo de trabajo y recursos para lograr los objetivos del proyecto en los plazos acordados',
-      '● *Aplicar procesos de gestión de proyectos (Agile), para planificar, ejecutar, supervisar, controlar y cerrar proyectos *',
-      '● * Dirigir y motivar al equipo mediante la implementación y ejecución de las mejores prácticas de la administración de proyectos (SCRUM)*',
-      '● Gestionar las sesiones necesarias de seguimiento, control y avances para la ejecución del proyecto.',
-      '● Gestión y control de riesgos, problemas y cambios que puedan haber en el proyecto',
-      '● Mantener una comunicación continua con los stakeholders.',
-    ],
+    image: 'ScrumMaster.png',
+    FuncionesConocimientos:
+      'Es responsabilidad del Administrador de proyectos asegurar que el alcance del trabajo se realice con calidad, dentro del presupuesto y a tiempo, para que el cliente quede satisfecho. Su responsabilidad principal es proporcionar liderazgo en la planeación, organización y control del esfuerzo del trabajo para lograr el objetivo establecido.',
+
     SoftSkills: [
       'Trabajo en equipo',
       'proactividad',
@@ -201,8 +190,9 @@ export const jobsObj = [
   },
   {
     name: 'Monitoring',
+    image: 'Monitoring.png',
     FuncionesConocimientos:
-      'Monitorear que los servidores estén funcionando acorde a los umbrales establecidos, monitorear que los procesos, apis, sistemas operen de manera adecuada. Realizar actividades de troubleshooting y escalar aquellas que sean requeridas. Realizar reporte de incidentes diario y de status de los recursos informáticos que se están monitoreando',
+      'Verificar el consumo de recursos en el sistema operativo, Verificar el correcto funcionamiento de las soluciones implementadas, Analizar y documentar los hallazgos encontrados, Ejecución de queries en BD, Compartir al equipo de desarrollo el análisis realizado en caso de no poder dar solución al problema.',
     SoftSkills: [
       'Trabajo en equipo',
       'proactividad',
@@ -217,8 +207,9 @@ export const jobsObj = [
   },
   {
     name: 'Full Stack',
+    image: 'PMO.png',
     FuncionesConocimientos:
-      'Desarrolle componentes basados en la interfaz de usuario en diseños o maquetas proporcionados, Desarrollar componentes de interfaz de usuario que pueden ser personalizados por el cliente a través del Editor del sitio VTEX, Código impulsado por el rendimiento, la calidad y el SEO asegurarse de que su código funcione en todos los navegadores y dispositivos requeridos, Mantener actualizada la documentación del proyecto. Flujo de trabajo durante todo el proceso de desarrollo, apoyar al equipo de control de calidad durante el proceso de prueba.',
+      'Buscamos un Desarrollador Full Stack para trabajar en proyectos internacionales, tiene la capacidad de actuar sobre el viaje digital de cada usuario. Desde la configuración de plataformas, implementaciones e integraciones hasta la entrega de una gran experiencia al consumidor. Junto con todo el equipo de marketing trabajando para un mejor rendimiento digital, calificando aún más la entrega del viaje del usuario.',
     SoftSkills: [
       'Trabajo en equipo',
       'proactividad',
@@ -232,8 +223,9 @@ export const jobsObj = [
   },
   {
     name: 'Diseñador UX Senior',
+    image: 'UXSenior.png',
     FuncionesConocimientos:
-      'Experiencia en el diseño y la entrega de productos de principio a fin como parte de un equipo multifuncional, Capacidad para administrar con éxito todos los aspectos de un proyecto de principio a fin, trabajando con miembros del equipo distribuidos y en el sitio para garantizar la entrega del proyecto a tiempo, Automotivación; capacidad para producir resultados de forma independiente y como parte de un equipo, Habilidad para transmitir claramente y seguir instrucciones, Capacidad para crear y entregar rápidamente un trabajo de diseño original y de calidad profesional que sea conceptualmente sólido, satisfaga las necesidades comerciales y esté en la marca y en breve, Comprensión experta de métodos y prácticas de diseño centrados en el usuario Experiencia en el uso de múltiples enfoques, incluidos análisis e investigación de usuarios, para impulsar decisiones y desarrollar iteraciones de productos, Conocimiento experto de las herramientas de diseño actuales, como Figma, junto con la capacidad de aprender rápidamente nuevas herramientas a medida que surgen, Habilidad para comunicar ideas a una amplia variedad de partes interesadas, liderar debates y actividades creativas, y generar consenso mientras se enfrenta a la ambigüedad. Habilidad para liderar y administrar grandes iniciativas de diseño, incluida la gestión de prioridades contrapuestas con colegas de ingeniería y productos.',
+      'Nuestros equipos de UX aspiran a crear productos que la gente ame: herramientas que hagan que el día de un vendedor sea más productivo, que la campaña de un vendedor sea más poderosa o que la aplicación de un desarrollador tenga más funciones. ',
     SoftSkills: [
       'Trabajo en equipo',
       'proactividad',
@@ -248,15 +240,17 @@ export const jobsObj = [
   },
   {
     name: 'Becarios',
+    image: 'PMO.png',
     FuncionesConocimientos:
-      'Este rol brinda la oportunidad de trabajar con un equipo técnico de alto rendimiento. Podrá forjarse como excelente ingeniero entendiendo todas las fases del ciclo de vida de software. El equipo de ingeniería de Vinneren está innovando rápidamente en el espacio de TI y mejorando la productividad de los desarrolladores desde el código en la nube. Se parte del equipo dinámico Si ha sido un tecnólogo de vanguardia y le ha apasionado mejorar la productividad de los desarrolladores ¡entonces este es el equipo para ti!',
+      'Este rol brinda la oportunidad de trabajar con un equipo técnico de alto rendimiento.  Podrá forjarse como excelente ingeniero entendiendo todas las fases del ciclo de vida de software. Se parte del equipo dinámico Si ha sido un tecnólogo de vanguardia y le ha apasionado mejorar la productividad de los desarrolladores ¡entonces este es el equipo para ti!',
     SoftSkills: [],
     TechSkills: [],
   },
   {
     name: 'DigiOps',
+    image: 'PMO.png',
     FuncionesConocimientos:
-      'El desarrollo del puesto ayudará a las demás áreas del equipo y a el cliente a resolver temas relacionados con la funcionalidad de los ambientes.',
+      'El desarrollo del puesto ayudará a las demás áreas del equipo y al cliente a resolver temas relacionados con la funcionalidad de los ambientes.',
     SoftSkills: [
       'Trabajo en equipo',
       'Multitask (trabajo con diferentes clientes al mismo tiempo)',

@@ -5,9 +5,6 @@ import 'aos/dist/aos.css'
 import { Card, CardImg, CardBody, CardTitle, CardText, Modal } from 'reactstrap'
 import ModalWork from '../../components/Modals/Modal-Work-With-Us'
 import { jobsObj } from '../../components/Modals/Modal-Work-With-Us/jobs'
-import work1 from '../../img/PMO.png'
-/* import work2 from '../../../img/QA.png'
-import work3 from '../../../img/Comercial.png' */
 
 const Work = () => {
   const intl = useIntl()
@@ -34,7 +31,7 @@ const Work = () => {
         </h2>
       </div>
       <div className="sec-content">
-        {jobsObj.map(({ name }, i) => {
+        {jobsObj.map(({ name, image }, i) => {
           return (
             <>
               <Card
@@ -48,7 +45,7 @@ const Work = () => {
                   <CardTitle>{name}</CardTitle>
                   <CardImg
                     alt="card-pmo"
-                    src={work1}
+                    src={require(`../../img/${image}`)}
                     style={{ maxWidth: '166px' }}
                   />
                   <CardText>

@@ -3,37 +3,22 @@ import { useIntl } from 'react-intl'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import { Input, Label, Button } from 'reactstrap'
-
+import { useForm } from 'react-hook-form'
 /* import Loader from '../../components/Loader'
 import Message from '../../components/Message' */
 import './contact-us.css'
 
 const ContactUs = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
   const intl = useIntl()
   const [value, SetValue] = useState({})
   const [valuePhone, setValuePhone] = useState('')
-  const handleSubmit = e => {
-    e.preventDefault()
-    console.log(value)
-    const requestOptions = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        ApiKey:
-          'TpQFV1OVMGg7HwnSMZ9IPXtZUBt7wVoTWp1mTL9W3Skiu3qrghAErESRemSAW6oj',
-        Accept: '*/*',
-        'Accept-Encoding': 'keep-alive',
-      },
-      body: JSON.stringify(value),
-    }
-    fetch(
-      'https://api.vinneren.com.mx/forms-v1/vinnerenContact/contactUs',
-      requestOptions,
-    )
-      .then(response => response.json())
-      .then(data => console.log(data))
-  }
 
+  const onSubmit = data => console.log(data)
   return (
     <div className="contact-us">
       <div className="bar"></div>
@@ -48,29 +33,27 @@ const ContactUs = () => {
             id: 'app.pages.contactUs.label.subtitle',
           })}
         </h4>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-inputs">
             <div className="form-left">
-              <Label for="firstName">
-                {intl.formatMessage({
-                  id: 'app.pages.contactUs.label.firstname',
-                })}
-              </Label>
-              <Input
-                id="firstName"
-                placeholder={intl.formatMessage({
-                  id: 'app.pages.contactUs.label.firstname',
-                })}
-                type="text"
-                name="firstName"
-                /* onBlur={handleBlur} */
-                onChange={e => {
-                  SetValue({ ...value, firstName: e.target.value })
-                }}
-                value={value.firstName}
-                required
-              />
-              {/* errors.firstName && <p style={styles}>{errors.firstName}</p> */}
+              <div>
+                <Label for="firstName">
+                  {intl.formatMessage({
+                    id: 'app.pages.contactUs.label.firstname',
+                  })}
+                </Label>
+                <input
+                  id="firstName"
+                  placeholder={intl.formatMessage({
+                    id: 'app.pages.contactUs.label.firstname',
+                  })}
+                  type="text"
+                  {...register('firstName', { required: true })}
+                />
+                {errors.firstName && (
+                  <span style={{ color: '#F00' }}>Este campo es Requerido</span>
+                )}
+              </div>
               <Label for="email">
                 {intl.formatMessage({
                   id: 'app.pages.contactUs.label.email',

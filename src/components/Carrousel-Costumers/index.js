@@ -140,10 +140,10 @@ export default function Carousel(props) {
           <div className="sec-right">
             <h3>Nadro</h3>
             <p>
-              Lanzamiento del sitio web B2B. Más de 20,000 clientes, diferentes
-              listas de precios por mostrador/sucursal, usuarios para compras
-              múltiples, precios e inventario real time, diferentes entregas
-              (same day, next day, entrega nocturna).
+              Caso más grande B2B de VTEX y Vinneren a nivel mundial. B2B
+              cerrado, con más de 20,000 clientes, precio e inventarios en
+              tiempo real, varios métodos de entrega. Desarrollo de varios
+              componentes personalizados tanto en front end como en back end.
             </p>
             <a href="https://i22.nadro.mx">i22.nadro.mx</a>
           </div>
@@ -151,34 +151,39 @@ export default function Carousel(props) {
           <div className="sec-right">
             <h3>Modelorama</h3>
             <p>
-              Lanzamiento del sitio web B2B. Más de 20,000 clientes, diferentes
-              listas de precios por mostrador/sucursal, usuarios para compras
-              múltiples, precios e inventario real time, diferentes entregas
-              (same day, next day, entrega nocturna).
+              De Grupo Modelo, es una tienda de conveniencia especializada en
+              cerveza y cerveza artesanal para una experiencia social en
+              cualquier ocasión. Lanzamiento del 1er. sitio On Demand para Grupo
+              Modelo, VTEX y Vinneren, en 2 países México Modelorama Now y
+              Paraguay estacion.com.py. También realizamos la conexión de
+              middleware con sistema logístico, escalable para todos los países
+              del proyecto e implementación doble desafío de validación de
+              cuentas.
             </p>
-            <a href="https://i22.nadro.mx">i22.nadro.mx</a>
+            <a href="https://now.modelorama.com.mx">now.modelorama.com.mx</a>
           </div>
         ) : selectedImage === text[2] ? (
           <div className="sec-right">
             <h3>Elektra</h3>
             <p>
-              Lanzamiento del sitio web B2B. Más de 20,000 clientes, diferentes
-              listas de precios por mostrador/sucursal, usuarios para compras
-              múltiples, precios e inventario real time, diferentes entregas
-              (same day, next day, entrega nocturna).
+              Diversos desarrollos incluyendo buscando mejorar la experiencia de
+              los usuarios. Entre ellos destacan, el rediseño del CheckOut,
+              desagregación de inventarios, célula de recursos dedicada,
+              desarrollo de integración de crédito Elektra, entre muchos otros.
             </p>
-            <a href="https://i22.nadro.mx">i22.nadro.mx</a>
+            <a href="https://www.elektra.com.gt">elektra.com.gt</a>
           </div>
         ) : selectedImage === text[3] ? (
           <div className="sec-right">
             <h3>Xiaomi</h3>
             <p>
-              Lanzamiento del sitio web B2B. Más de 20,000 clientes, diferentes
-              listas de precios por mostrador/sucursal, usuarios para compras
-              múltiples, precios e inventario real time, diferentes entregas
-              (same day, next day, entrega nocturna).
+              Lanzamiento de su tienda en línea que además fue la primera tienda
+              lanzada en tecnología IO en México. A ésta tienda han seguido el
+              lanzamiento en otros países como USA, Colombia, Perú y
+              próximamente Chile. Recientemente también realizamos el re-diseño
+              de la nueva versión mobile.
             </p>
-            <a href="https://i22.nadro.mx">i22.nadro.mx</a>
+            <a href="https://www.xiaomishop.mx">xiaomishop.mx</a>
           </div>
         ) : selectedImage === text[4] ? (
           <div className="sec-right">
