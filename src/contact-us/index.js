@@ -2,10 +2,8 @@ import { useState } from 'react'
 import { useIntl } from 'react-intl'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
-import { Input, Label, Button } from 'reactstrap'
+import { Label, Button } from 'reactstrap'
 import { useForm } from 'react-hook-form'
-/* import Loader from '../../components/Loader'
-import Message from '../../components/Message' */
 import './contact-us.css'
 
 const ContactUs = () => {
@@ -15,10 +13,36 @@ const ContactUs = () => {
     formState: { errors },
   } = useForm()
   const intl = useIntl()
-  const [value, SetValue] = useState({})
   const [valuePhone, setValuePhone] = useState('')
-
-  const onSubmit = data => console.log(data)
+  const [message, setMessage] = useState(null)
+  const onSubmit = async data => {
+    try {
+      await fetch(
+        'https://api.vinneren.com.mx/forms-v1/vinnerenContact/contactUs',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            ApiKey:
+              'TpQFV1OVMGg7HwnSMZ9IPXtZUBt7wVoTWp1mTL9W3Skiu3qrghAErESRemSAW6oj',
+          },
+          body: JSON.stringify(data),
+        },
+      )
+        .then(response => response.json())
+        .then(data => {
+          const { hasError, message } = data
+          setMessage(message)
+          if (!hasError) {
+            setTimeout(() => {
+              window.location.reload()
+            }, 2000)
+          }
+        })
+    } catch (error) {
+      console.log(error)
+    }
+  }
   return (
     <div className="contact-us">
       <div className="bar"></div>
@@ -36,63 +60,72 @@ const ContactUs = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-inputs">
             <div className="form-left">
-              <div>
-                <Label for="firstName">
+              <Label for="firstName">
+                {intl.formatMessage({
+                  id: 'app.pages.contactUs.label.firstname',
+                })}
+              </Label>
+              <input
+                className="form-input"
+                id="firstName"
+                placeholder={intl.formatMessage({
+                  id: 'app.pages.contactUs.label.firstname',
+                })}
+                type="text"
+                {...register('firstName', { required: true })}
+              />
+              {errors.firstName && (
+                <span style={{ color: '#F00' }}>
                   {intl.formatMessage({
-                    id: 'app.pages.contactUs.label.firstname',
+                    id: 'app.pages.contactUs.label.input-required',
                   })}
-                </Label>
-                <input
-                  id="firstName"
-                  placeholder={intl.formatMessage({
-                    id: 'app.pages.contactUs.label.firstname',
-                  })}
-                  type="text"
-                  {...register('firstName', { required: true })}
-                />
-                {errors.firstName && (
-                  <span style={{ color: '#F00' }}>Este campo es Requerido</span>
-                )}
-              </div>
+                </span>
+              )}
+
               <Label for="email">
                 {intl.formatMessage({
                   id: 'app.pages.contactUs.label.email',
                 })}
               </Label>
-              <Input
+              <input
+                className="form-input"
                 id="email"
                 name="email"
-                /* onBlur={handleBlur} */
-                onChange={e => {
-                  SetValue({ ...value, email: e.target.value })
-                }}
-                value={value.email}
                 placeholder={intl.formatMessage({
                   id: 'app.pages.contactUs.label.email',
                 })}
                 type="email"
-                required
+                {...register('email', { required: true })}
               />
-              {/* errors.email && <p style={styles}>{errors.email}</p> */}
+              {errors.email && (
+                <span style={{ color: '#F00' }}>
+                  {intl.formatMessage({
+                    id: 'app.pages.contactUs.label.input-required',
+                  })}
+                </span>
+              )}
               <Label for="company">
                 {intl.formatMessage({
                   id: 'app.pages.contactUs.label.enterprise',
                 })}
               </Label>
-              <Input
+              <input
+                className="form-input"
                 id="company"
                 name="company"
-                /* onBlur={handleBlur} */
-                onChange={e => {
-                  SetValue({ ...value, company: e.target.value })
-                }}
-                value={value.company}
                 placeholder={intl.formatMessage({
                   id: 'app.pages.contactUs.label.enterprise',
                 })}
+                {...register('company', { required: true })}
                 type="text"
-                required
               />
+              {errors.company && (
+                <span style={{ color: '#F00' }}>
+                  {intl.formatMessage({
+                    id: 'app.pages.contactUs.label.input-required',
+                  })}
+                </span>
+              )}
             </div>
             <div className="form-right">
               <Label for="lastName">
@@ -100,19 +133,21 @@ const ContactUs = () => {
                   id: 'app.pages.contactUs.label.surname',
                 })}
               </Label>
-              <Input
+              <input
+                className="form-input"
                 id="lastName"
                 name="lastName"
-                /* onBlur={handleBlur} */
-                onChange={e => {
-                  SetValue({ ...value, lastName: e.target.value })
-                }}
-                value={value.lastName}
                 placeholder="Apellido*"
                 type="text"
-                required
+                {...register('lastName', { required: true })}
               />
-              {/* errors.lastName && <p style={styles}>{errors.lastName}</p> */}
+              {errors.lastName && (
+                <span style={{ color: '#F00' }}>
+                  {intl.formatMessage({
+                    id: 'app.pages.contactUs.label.input-required',
+                  })}
+                </span>
+              )}
               <Label for="phoneNumber">
                 {intl.formatMessage({
                   id: 'app.pages.contactUs.label.phone',
@@ -127,31 +162,31 @@ const ContactUs = () => {
                 })}
                 defaultCountry="MX"
                 onChange={setValuePhone}
-                onBlur={e =>
-                  SetValue({ ...value, phoneNumber: e.target.value })
-                }
                 value={valuePhone}
+                {...register('phoneNumber', { required: true })}
               />
-              {/* {errors.phone && <p style={styles}>{errors.phone}</p>} */}
+              {errors.phoneNumber && (
+                <span style={{ color: '#F00' }}>
+                  {intl.formatMessage({
+                    id: 'app.pages.contactUs.label.input-required',
+                  })}
+                </span>
+              )}
               <Label for="position">
                 {intl.formatMessage({
                   id: 'app.pages.contactUs.label.job',
                 })}
               </Label>
-              <Input
+              <input
+                className="form-input"
                 id="position"
                 name="position"
                 placeholder={intl.formatMessage({
                   id: 'app.pages.contactUs.label.job',
                 })}
                 type="text"
-                /* onBlur={handleBlur} */
-                onChange={e => {
-                  SetValue({ ...value, position: e.target.value })
-                }}
-                value={value.position}
+                {...register('position', { required: true })}
               />
-              {/* errors.position && <p style={styles}>{errors.position}</p> */}
             </div>
           </div>
           <div className="area-text">
@@ -160,20 +195,16 @@ const ContactUs = () => {
                 id: 'app.pages.contactUs.label.message',
               })}
             </Label>
-            <Input
+            <input
+              className="form-input"
               id="message"
               name="message"
-              /* onBlur={handleBlur} */
-              onChange={e => {
-                SetValue({ ...value, message: e.target.value })
-              }}
-              value={value.message}
               type="textarea"
               placeholder={intl.formatMessage({
                 id: 'app.pages.contactUs.label.message-opt',
               })}
+              {...register('message', { required: true })}
             />
-            {/* errors.message && <p style={styles}>{errors.message}</p> */}
           </div>
           <Button color="primary" id="btn-send" /* disabled={} */>
             {intl.formatMessage({
@@ -181,15 +212,8 @@ const ContactUs = () => {
             })}
           </Button>
         </form>
-        {/* {loading && <Loader />}
-        {response && (
-          <Message
-            msg={intl.formatMessage({
-              id: 'app.pages.contactUs.label.send-message',
-            })}
-            bgColor="#01c268"
-          />
-        )} */}
+        {/* loading && <Loader /> */}
+        {message && <p bgColor="#01c268">{message}</p>}
       </div>
     </div>
   )

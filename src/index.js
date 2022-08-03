@@ -1,6 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-/* import { BrowserRouter } from 'react-router-dom' */
+import * as ReactDOM from 'react-dom'
 import { IntlProvider } from 'react-intl'
 import { getCookie, setCookie } from './utils/cookie'
 import './index.css'

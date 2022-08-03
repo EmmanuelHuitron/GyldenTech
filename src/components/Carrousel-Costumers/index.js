@@ -56,7 +56,7 @@ export default function Carousel(props) {
           <img
             src={require(`../../img/Logo_Nandro.png`)}
             alt="carrusel"
-            style={{ maxWidth: '154px' }}
+            style={{ maxWidth: '154px', paddingBottom: '5px' }}
           />
           <div
             className={

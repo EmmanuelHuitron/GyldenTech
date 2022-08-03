@@ -85,7 +85,7 @@
     align-items: flex-start;
 }
 
-.PhoneInputInput {
+.PhoneInputInput, .form-input {
     width: 100%;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
@@ -100,7 +100,7 @@
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.PhoneInputInput:focus{
+.PhoneInputInput:focus, .form-input:focus{
     background-color: #fff;
     border-color: #86b7fe;
     outline: 0;

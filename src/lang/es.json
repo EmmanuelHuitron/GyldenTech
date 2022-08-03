@@ -55,6 +55,7 @@
   "app.pages.contactUs.label.enterprise-required": "El campo 'Empresa' es requerido",
   "app.pages.contactUs.label.surname-required": "El campo 'Apellido' es requerido",
   "app.pages.contactUs.label.surname-required2": "El campo 'Apellido' sólo acepta letras y espacios en blanco",
+  "app.pages.contactUs.label.input-required": "*Este campo es Requerido",
   "app.pages.contactUs.label.firstname": "Nombre*",
   "app.pages.contactUs.label.surname": "Apellido*",
   "app.pages.contactUs.label.email": "Correo Electrónico*",

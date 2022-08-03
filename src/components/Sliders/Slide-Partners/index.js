@@ -1,11 +1,13 @@
 import Slider from 'react-slick'
 
 import pay1 from '../../../img/VTEX.png'
-import pay2 from '../../../img/Datatrics.png'
-import pay3 from '../../../img/OpenPay.png'
-import pay4 from '../../../img/PayPal.png'
-import pay5 from '../../../img/OKY.png'
-import pay6 from '../../../img/Conekta.png'
+import pay2 from '../../../img/Stripe-01.png'
+import pay3 from '../../../img/Datatrics.png'
+import pay4 from '../../../img/OpenPay.png'
+import pay5 from '../../../img/PayPal.png'
+import pay6 from '../../../img/BigCommerce-logo.png'
+import pay7 from '../../../img/OKY.png'
+import pay8 from '../../../img/Conekta.png'
 
 const SliderPartner = () => {
   const settings = {
@@ -15,15 +17,15 @@ const SliderPartner = () => {
     speed: 4000,
     autoplaySpeed: 3000,
     cssEase: 'linear',
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 6,
+    slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 4,
+          slidesToScroll: 2,
           infinite: true,
           dots: true,
         },
@@ -31,7 +33,7 @@ const SliderPartner = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 2,
           initialSlide: 2,
         },
@@ -65,6 +67,12 @@ const SliderPartner = () => {
         </div>
         <div>
           <img src={pay6} alt="pay6" style={{ maxWidth: '165px' }} />
+        </div>
+        <div>
+          <img src={pay7} alt="pay7" style={{ maxWidth: '165px' }} />
+        </div>
+        <div>
+          <img src={pay8} alt="pay8" style={{ maxWidth: '165px' }} />
         </div>
       </Slider>
     </div>
