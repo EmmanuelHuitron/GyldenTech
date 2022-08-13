@@ -59,8 +59,8 @@ const ModalWork = ({ handleClick, work, open }) => {
                 <>
                   <h4>TECH SKILLS</h4>
                   <ul>
-                    {findWork?.TechSkills.map((tskills, d) => {
-                      return <li key={d}>{tskills}</li>
+                    {findWork?.TechSkills.map((tskills, i) => {
+                      return <li key={i}>{tskills}</li>
                     })}
                   </ul>
                 </>

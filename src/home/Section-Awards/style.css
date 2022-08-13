@@ -1,0 +1,13 @@
+.aws {
+  margin-top: 30px;
+}
+.aws h3 {
+  margin-bottom: 30px;
+}
+.certificado-aws {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

@@ -1,3 +1,10 @@
+import {
+  CertificadosAccreditationTechnical,
+  CertificadosAccreditationBusiness,
+  CertificadosSalesAccreditation,
+  CertificadosCloudEconomicsAccreditation,
+} from './Certificados'
+import './style.css'
 import { useIntl } from 'react-intl'
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap'
 import AOS from 'aos'
@@ -353,6 +360,21 @@ const Awards = () => {
               data-aos-once="true"
             />
           </div>
+        </div>
+      </div>
+      <div className="aws">
+        <h3 style={{ fontSize: '1.75rem', color: '#000' }}>
+          {intl.formatMessage({
+            id: 'app.pages.home.sectionAwards.label.certification-aws',
+          })}
+        </h3>
+        <div className="certificado-aws">
+          <CertificadosAccreditationTechnical />
+          <CertificadosAccreditationBusiness />
+        </div>
+        <div className="certificado-aws">
+          <CertificadosSalesAccreditation />
+          <CertificadosCloudEconomicsAccreditation />
         </div>
       </div>
     </div>

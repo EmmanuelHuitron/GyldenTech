@@ -33,9 +33,8 @@ const Work = () => {
       <div className="sec-content">
         {jobsObj.map(({ name, image }, i) => {
           return (
-            <>
+            <div key={i}>
               <Card
-                key={i}
                 onClick={() => handleClick(name)}
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -55,7 +54,7 @@ const Work = () => {
                   </CardText>
                 </CardBody>
               </Card>
-            </>
+            </div>
           )
         })}
       </div>

@@ -1,5 +1,4 @@
-import React from 'react'
-import * as ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { IntlProvider } from 'react-intl'
 import { getCookie, setCookie } from './utils/cookie'
 import './index.css'
@@ -24,11 +23,10 @@ if (!local) {
   }
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <IntlProvider locale={local} messages={messages} defaultLocale="es-ES">
-      <App />
-    </IntlProvider>
-  </React.StrictMode>,
-  document.getElementById('root'),
+const container = document.getElementById('root')
+const root = createRoot(container) // createRoot(container!) if you use TypeScript
+root.render(
+  <IntlProvider locale={local} messages={messages} defaultLocale="es-ES">
+    <App tab="home" />
+  </IntlProvider>,
 )
