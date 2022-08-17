@@ -11,7 +11,11 @@ import './input-file.css'
 
 const WorkWithUs = () => {
   const intl = useIntl()
-  const { register, handleSubmit } = useForm()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
   const [value, SetValue] = useState('')
   const [valueFile, setValueFile] = useState('')
   const [message, setMessage] = useState(null)
@@ -19,41 +23,36 @@ const WorkWithUs = () => {
   const onSubmit = data => {
     console.log(data.cvFile[0])
     const formData = new FormData()
-    formData.set('email', data.email)
-    formData.set('fullName', data.fullName)
-    formData.set('cvFile', data.cvFile[0])
-    formData.set('linkedIn', data.linkedIn)
-    formData.set('moreAboutYou', data.moreAboutYou)
-    formData.set('phoneNumber', data.phoneNumber)
-    formData.set('requiredPosition', data.requiredPosition)
+    formData.append('email', data.email)
+    formData.append('fullName', data.fullName)
+    formData.append('cvFile', data.cvFile[0])
+    formData.append('linkedIn', data.linkedIn)
+    formData.append('moreAboutYou', data.moreAboutYou)
+    formData.append('phoneNumber', data.phoneNumber)
+    formData.append('requiredPosition', data.requiredPosition)
 
-    try {
-      fetch(
-        'https://api.vinneren.com.mx/forms-v1/vinnerenContact/jobApplication',
-        {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Content-Type':
-              'multipart/form-data; boundary=<calculated when request is sent>',
-            ApiKey:
-              'TpQFV1OVMGg7HwnSMZ9IPXtZUBt7wVoTWp1mTL9W3Skiu3qrghAErESRemSAW6oj',
-          },
+    fetch(
+      'https://api.vinneren.com.mx/forms-v1/vinnerenContact/jobApplication',
+      {
+        method: 'POST',
+        body: formData,
+        headers: {
+          /* 'Content-Type': 'multipart/form-data', */
+          ApiKey:
+            'TpQFV1OVMGg7HwnSMZ9IPXtZUBt7wVoTWp1mTL9W3Skiu3qrghAErESRemSAW6oj',
         },
-      )
-        .then(response => response.json())
-        .then(data => {
-          const { hasError, message } = data
-          setMessage(message)
-          if (!hasError) {
-            setTimeout(() => {
-              window.location.reload()
-            }, 2000)
-          }
-        })
-    } catch (error) {
-      console.log(error)
-    }
+      },
+    )
+      .then(response => response.json())
+      .then(data => {
+        const { hasError, message } = data
+        setMessage(message)
+        if (!hasError) {
+          setTimeout(() => {
+            window.location.reload()
+          }, 2000)
+        }
+      })
   }
   return (
     <>
@@ -94,13 +93,20 @@ const WorkWithUs = () => {
                     )
                   })}
                 </select>
-
+                {errors.requiredPosition && (
+                  <span style={{ color: '#F00' }}>
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.input-required',
+                    })}
+                  </span>
+                )}
                 <Label for="email">
                   {intl.formatMessage({
                     id: 'app.pages.contactUs.label.email',
                   })}
                 </Label>
                 <input
+                  className="form-input"
                   id="email"
                   name="email"
                   {...register('email', { required: true })}
@@ -110,13 +116,20 @@ const WorkWithUs = () => {
                   type="email"
                   required
                 />
-                {/* errors.email && <p style={styles}>{errors.email}</p> */}
+                {errors.email && (
+                  <span style={{ color: '#F00' }}>
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.input-required',
+                    })}
+                  </span>
+                )}
                 <Label for="linkedIn">
                   {intl.formatMessage({
                     id: 'app.pages.work-with-us.label.linkedIn',
                   })}
                 </Label>
                 <input
+                  className="form-input"
                   id="linkedIn"
                   name="linkedIn"
                   placeholder={intl.formatMessage({
@@ -126,7 +139,13 @@ const WorkWithUs = () => {
                   {...register('linkedIn', { required: true })}
                   required
                 />
-                {/* errors.linkedIn && <p style={styles}>{errors.linkedIn}</p> */}
+                {errors.linkedIn && (
+                  <span style={{ color: '#F00' }}>
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.input-required',
+                    })}
+                  </span>
+                )}
               </div>
               <div className="form-right">
                 <Label for="name">
@@ -135,14 +154,20 @@ const WorkWithUs = () => {
                   })}
                 </Label>
                 <input
+                  className="form-input"
                   id="name"
                   name="fullName"
                   placeholder="Nombre*"
                   type="text"
                   {...register('fullName', { required: true })}
-                  required
                 />
-                {/* errors.name && <p style={styles}>{errors.name}</p> */}
+                {errors.fullName && (
+                  <span style={{ color: '#F00' }}>
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.input-required',
+                    })}
+                  </span>
+                )}
                 <Label for="telphone">
                   {intl.formatMessage({
                     id: 'app.pages.contactUs.label.phone',
@@ -160,7 +185,13 @@ const WorkWithUs = () => {
                   value={value}
                   {...register('phoneNumber', { required: true })}
                 />
-                {/* errors.phone && <p style={styles}>{errors.phone}</p> */}
+                {errors.phoneNumber && (
+                  <span style={{ color: '#F00' }}>
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.input-required',
+                    })}
+                  </span>
+                )}
                 <div className="container-input">
                   <input
                     id="cvFile"
@@ -200,6 +231,7 @@ const WorkWithUs = () => {
                 })}
               </Label>
               <input
+                className="form-input"
                 id="exampleText"
                 name="moreAboutYou"
                 placeholder={intl.formatMessage({

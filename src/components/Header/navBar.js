@@ -32,7 +32,7 @@ const NavBar = ({ open, handleClick }) => {
             />
           </svg>
         </div>
-        {window.screen.width > 768 ? (
+        {window.screen.width > 1300 ? (
           <div className="menu-content">
             <div className="nav-link">
               <a href="#know-us" style={{ color: '#FFFFFF' }}>

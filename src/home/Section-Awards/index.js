@@ -54,6 +54,7 @@ const Awards = () => {
                 justifyContent: 'flex-start',
                 padding: '40px 30px',
                 background: '#F4F4F4',
+                borderRadius: '5px',
               }}
             >
               <div className="image-card" style={{ marginRight: '30px' }}>
@@ -121,6 +122,7 @@ const Awards = () => {
                 justifyContent: 'flex-start',
                 padding: '40px 30px',
                 background: '#F4F4F4',
+                borderRadius: '5px',
               }}
             >
               <div className="image-card" style={{ marginRight: '30px' }}>
@@ -188,6 +190,7 @@ const Awards = () => {
                 justifyContent: 'flex-start',
                 padding: '40px 30px',
                 background: '#F4F4F4',
+                borderRadius: '5px',
               }}
             >
               <div className="image-card" style={{ marginRight: '30px' }}>
@@ -255,6 +258,7 @@ const Awards = () => {
                 justifyContent: 'flex-start',
                 padding: '40px 30px',
                 background: '#F4F4F4',
+                borderRadius: '5px',
               }}
             >
               <div className="image-card" style={{ marginRight: '30px' }}>

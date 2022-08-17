@@ -111,7 +111,7 @@ const Header = () => {
       </div>
 
       <NavBar open={open} handleClick={handleClick} />
-      {window.screen.width > 768 ? (
+      {window.screen.width > 1300 ? (
         <div className="btn-inter">
           <Link to="/contact-us">
             <Button variant="light">
