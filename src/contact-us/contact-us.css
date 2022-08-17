@@ -1,116 +1,130 @@
 .contact-us {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .bar {
-    width: 100%;
-    height: 220px;
-    background: #003EDF;
+  width: 100%;
+  height: 220px;
+  background: #003edf;
 }
 .contact-us-content {
-    width: 100%;
-    max-width: 1100px;
-    background: #FFFFFF;
-    margin-top: -175px;
-    padding: 49px 45px 45px 39px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    margin-bottom: 110px;
+  width: 100%;
+  max-width: 1100px;
+  background: #ffffff;
+  margin-top: -175px;
+  padding: 49px 45px 45px 39px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-bottom: 110px;
 }
 .contact-us-content h2 {
-    font-weight: 600;
-    font-size: 36px;
-    margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 .contact-us-content h4 {
-    font-size: 18px;
-    margin-bottom: 50px;
+  font-size: 18px;
+  margin-bottom: 50px;
 }
 .contact-us-content form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .area-text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 30px;
 }
 #exampleText {
-    height: 190px;
+  height: 190px;
 }
 .form-inputs {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 .form-label {
-    font-size: 14px;
-    font-weight: 700;
+  font-size: 14px;
+  font-weight: 700;
 }
 .form-inputs input {
-    max-width: 440px;
-    width: 100%;
+  max-width: 440px;
+  width: 100%;
 }
 .form-inputs input::placeholder {
-    font-size: 14px;
+  font-size: 14px;
 }
 .form-left,
 .form-right {
-    width: 100%;
-    max-width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .form-left p,
-.form-right p{
-    font-size: 12px;
+.form-right p {
+  font-size: 12px;
 }
 .form-left label,
 .form-right label,
 .area-text label {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 .PhoneInput {
-    width: 98%;
-    display: flex;
-    align-items: flex-start;
+  width: 98%;
+  display: flex;
+  align-items: flex-start;
 }
 
-.PhoneInputInput, .form-input {
-    width: 100%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    appearance: none;
-    border-radius: 0.25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+.PhoneInputInput,
+.form-input {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.PhoneInputInput:focus, .form-input:focus{
-    background-color: #fff;
-    border-color: #86b7fe;
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+.PhoneInputInput:focus,
+.form-input:focus {
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
 }
 
 #btn-send {
-    width: 100%;
-    height: 44px;
-    max-width:440px;
-    margin-top: 40px;
-    background: #0084FF;
+  width: 100%;
+  height: 44px;
+  max-width: 440px;
+  margin-top: 40px;
+  background: #0084ff;
+}
+
+@media (max-width: 768px) {
+  .form-inputs {
+    flex-direction: column;
+  }
+  .bar {
+    height: 200px;
+  }
+  .area-text {
+    padding: 0;
+  }
 }

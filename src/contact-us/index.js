@@ -43,9 +43,11 @@ const ContactUs = () => {
       console.log(error)
     }
   }
+
   return (
     <div className="contact-us">
       <div className="bar"></div>
+
       <div className="contact-us-content">
         <h2>
           {intl.formatMessage({
@@ -57,161 +59,325 @@ const ContactUs = () => {
             id: 'app.pages.contactUs.label.subtitle',
           })}
         </h4>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="form-inputs">
-            <div className="form-left">
-              <Label for="firstName">
-                {intl.formatMessage({
-                  id: 'app.pages.contactUs.label.firstname',
-                })}
-              </Label>
-              <input
-                className="form-input"
-                id="firstName"
-                placeholder={intl.formatMessage({
-                  id: 'app.pages.contactUs.label.firstname',
-                })}
-                type="text"
-                {...register('firstName', { required: true })}
-              />
-              {errors.firstName && (
-                <span style={{ color: '#F00' }}>
-                  {intl.formatMessage({
-                    id: 'app.pages.contactUs.label.input-required',
-                  })}
-                </span>
-              )}
+        {window.screen.width > 768 ? (
+          <>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="form-inputs">
+                <div className="form-left">
+                  <Label for="firstName">
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.firstname',
+                    })}
+                  </Label>
+                  <input
+                    className="form-input"
+                    id="firstName"
+                    placeholder={intl.formatMessage({
+                      id: 'app.pages.contactUs.label.firstname',
+                    })}
+                    type="text"
+                    {...register('firstName', { required: true })}
+                  />
+                  {errors.firstName && (
+                    <span style={{ color: '#F00' }}>
+                      {intl.formatMessage({
+                        id: 'app.pages.contactUs.label.input-required',
+                      })}
+                    </span>
+                  )}
 
-              <Label for="email">
-                {intl.formatMessage({
-                  id: 'app.pages.contactUs.label.email',
-                })}
-              </Label>
-              <input
-                className="form-input"
-                id="email"
-                name="email"
-                placeholder={intl.formatMessage({
-                  id: 'app.pages.contactUs.label.email',
-                })}
-                type="email"
-                {...register('email', { required: true })}
-              />
-              {errors.email && (
-                <span style={{ color: '#F00' }}>
+                  <Label for="email">
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.email',
+                    })}
+                  </Label>
+                  <input
+                    className="form-input"
+                    id="email"
+                    name="email"
+                    placeholder={intl.formatMessage({
+                      id: 'app.pages.contactUs.label.email',
+                    })}
+                    type="email"
+                    {...register('email', { required: true })}
+                  />
+                  {errors.email && (
+                    <span style={{ color: '#F00' }}>
+                      {intl.formatMessage({
+                        id: 'app.pages.contactUs.label.input-required',
+                      })}
+                    </span>
+                  )}
+                  <Label for="company">
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.enterprise',
+                    })}
+                  </Label>
+                  <input
+                    className="form-input"
+                    id="company"
+                    name="company"
+                    placeholder={intl.formatMessage({
+                      id: 'app.pages.contactUs.label.enterprise',
+                    })}
+                    {...register('company', { required: true })}
+                    type="text"
+                  />
+                  {errors.company && (
+                    <span style={{ color: '#F00' }}>
+                      {intl.formatMessage({
+                        id: 'app.pages.contactUs.label.input-required',
+                      })}
+                    </span>
+                  )}
+                </div>
+                <div className="form-right">
+                  <Label for="lastName">
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.surname',
+                    })}
+                  </Label>
+                  <input
+                    className="form-input"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Apellido*"
+                    type="text"
+                    {...register('lastName', { required: true })}
+                  />
+                  {errors.lastName && (
+                    <span style={{ color: '#F00' }}>
+                      {intl.formatMessage({
+                        id: 'app.pages.contactUs.label.input-required',
+                      })}
+                    </span>
+                  )}
+                  <Label for="phoneNumber">
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.phone',
+                    })}
+                  </Label>
+                  <PhoneInput
+                    international
+                    name="phoneNumber"
+                    id="phoneNumber"
+                    placeholder={intl.formatMessage({
+                      id: 'app.pages.contactUs.label.phone',
+                    })}
+                    defaultCountry="MX"
+                    onChange={setValuePhone}
+                    value={valuePhone}
+                    {...register('phoneNumber', { required: true })}
+                  />
+                  {errors.phoneNumber && (
+                    <span style={{ color: '#F00' }}>
+                      {intl.formatMessage({
+                        id: 'app.pages.contactUs.label.input-required',
+                      })}
+                    </span>
+                  )}
+                  <Label for="position">
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.job',
+                    })}
+                  </Label>
+                  <input
+                    className="form-input"
+                    id="position"
+                    name="position"
+                    placeholder={intl.formatMessage({
+                      id: 'app.pages.contactUs.label.job',
+                    })}
+                    type="text"
+                    {...register('position', { required: true })}
+                  />
+                </div>
+              </div>
+              <div className="area-text">
+                <Label for="message">
                   {intl.formatMessage({
-                    id: 'app.pages.contactUs.label.input-required',
+                    id: 'app.pages.contactUs.label.message',
                   })}
-                </span>
-              )}
-              <Label for="company">
+                </Label>
+                <textarea
+                  className="form-input"
+                  id="message"
+                  name="message"
+                  type="textarea"
+                  placeholder={intl.formatMessage({
+                    id: 'app.pages.contactUs.label.message-opt',
+                  })}
+                  {...register('message', { required: true })}
+                />
+              </div>
+              <Button color="primary" id="btn-send" /* disabled={} */>
                 {intl.formatMessage({
-                  id: 'app.pages.contactUs.label.enterprise',
+                  id: 'app.pages.contactUs.label.send',
                 })}
-              </Label>
-              <input
-                className="form-input"
-                id="company"
-                name="company"
-                placeholder={intl.formatMessage({
-                  id: 'app.pages.contactUs.label.enterprise',
-                })}
-                {...register('company', { required: true })}
-                type="text"
-              />
-              {errors.company && (
-                <span style={{ color: '#F00' }}>
+              </Button>
+            </form>
+          </>
+        ) : (
+          <>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="form-inputs">
+                <div className="form-left">
+                  <Label for="firstName">
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.firstname',
+                    })}
+                  </Label>
+                  <input
+                    className="form-input"
+                    id="firstName"
+                    placeholder={intl.formatMessage({
+                      id: 'app.pages.contactUs.label.firstname',
+                    })}
+                    type="text"
+                    {...register('firstName', { required: true })}
+                  />
+                  {errors.firstName && (
+                    <span style={{ color: '#F00' }}>
+                      {intl.formatMessage({
+                        id: 'app.pages.contactUs.label.input-required',
+                      })}
+                    </span>
+                  )}
+                  <Label for="lastName">
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.surname',
+                    })}
+                  </Label>
+                  <input
+                    className="form-input"
+                    id="lastName"
+                    name="lastName"
+                    placeholder={intl.formatMessage({
+                      id: 'app.pages.contactUs.label.surname',
+                    })}
+                    type="text"
+                    {...register('lastName', { required: true })}
+                  />
+                  {errors.lastName && (
+                    <span style={{ color: '#F00' }}>
+                      {intl.formatMessage({
+                        id: 'app.pages.contactUs.label.input-required',
+                      })}
+                    </span>
+                  )}
+                  <Label for="email">
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.email',
+                    })}
+                  </Label>
+                  <input
+                    className="form-input"
+                    id="email"
+                    name="email"
+                    placeholder={intl.formatMessage({
+                      id: 'app.pages.contactUs.label.email',
+                    })}
+                    type="email"
+                    {...register('email', { required: true })}
+                  />
+                  {errors.email && (
+                    <span style={{ color: '#F00' }}>
+                      {intl.formatMessage({
+                        id: 'app.pages.contactUs.label.input-required',
+                      })}
+                    </span>
+                  )}
+                </div>
+                <div className="form-right">
+                  <Label for="phoneNumber">
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.phone',
+                    })}
+                  </Label>
+                  <PhoneInput
+                    international
+                    name="phoneNumber"
+                    id="phoneNumber"
+                    placeholder={intl.formatMessage({
+                      id: 'app.pages.contactUs.label.phone',
+                    })}
+                    defaultCountry="MX"
+                    onChange={setValuePhone}
+                    value={valuePhone}
+                    {...register('phoneNumber', { required: true })}
+                  />
+                  {errors.phoneNumber && (
+                    <span style={{ color: '#F00' }}>
+                      {intl.formatMessage({
+                        id: 'app.pages.contactUs.label.input-required',
+                      })}
+                    </span>
+                  )}
+                  <Label for="company">
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.enterprise',
+                    })}
+                  </Label>
+                  <input
+                    className="form-input"
+                    id="company"
+                    name="company"
+                    placeholder={intl.formatMessage({
+                      id: 'app.pages.contactUs.label.enterprise',
+                    })}
+                    {...register('company', { required: true })}
+                    type="text"
+                  />
+                  {errors.company && (
+                    <span style={{ color: '#F00' }}>
+                      {intl.formatMessage({
+                        id: 'app.pages.contactUs.label.input-required',
+                      })}
+                    </span>
+                  )}
+                  <Label for="position">
+                    {intl.formatMessage({
+                      id: 'app.pages.contactUs.label.job',
+                    })}
+                  </Label>
+                  <input
+                    className="form-input"
+                    id="position"
+                    name="position"
+                    placeholder={intl.formatMessage({
+                      id: 'app.pages.contactUs.label.job',
+                    })}
+                    type="text"
+                    {...register('position', { required: true })}
+                  />
+                </div>
+              </div>
+              <div className="area-text">
+                <Label for="message">
                   {intl.formatMessage({
-                    id: 'app.pages.contactUs.label.input-required',
+                    id: 'app.pages.contactUs.label.message',
                   })}
-                </span>
-              )}
-            </div>
-            <div className="form-right">
-              <Label for="lastName">
-                {intl.formatMessage({
-                  id: 'app.pages.contactUs.label.surname',
-                })}
-              </Label>
-              <input
-                className="form-input"
-                id="lastName"
-                name="lastName"
-                placeholder="Apellido*"
-                type="text"
-                {...register('lastName', { required: true })}
-              />
-              {errors.lastName && (
-                <span style={{ color: '#F00' }}>
-                  {intl.formatMessage({
-                    id: 'app.pages.contactUs.label.input-required',
+                </Label>
+                <textarea
+                  className="form-input"
+                  id="message"
+                  name="message"
+                  type="textarea"
+                  placeholder={intl.formatMessage({
+                    id: 'app.pages.contactUs.label.message-opt',
                   })}
-                </span>
-              )}
-              <Label for="phoneNumber">
+                  {...register('message', { required: true })}
+                />
+              </div>
+              <Button color="primary" id="btn-send" /* disabled={} */>
                 {intl.formatMessage({
-                  id: 'app.pages.contactUs.label.phone',
+                  id: 'app.pages.contactUs.label.send',
                 })}
-              </Label>
-              <PhoneInput
-                international
-                name="phoneNumber"
-                id="phoneNumber"
-                placeholder={intl.formatMessage({
-                  id: 'app.pages.contactUs.label.phone',
-                })}
-                defaultCountry="MX"
-                onChange={setValuePhone}
-                value={valuePhone}
-                {...register('phoneNumber', { required: true })}
-              />
-              {errors.phoneNumber && (
-                <span style={{ color: '#F00' }}>
-                  {intl.formatMessage({
-                    id: 'app.pages.contactUs.label.input-required',
-                  })}
-                </span>
-              )}
-              <Label for="position">
-                {intl.formatMessage({
-                  id: 'app.pages.contactUs.label.job',
-                })}
-              </Label>
-              <input
-                className="form-input"
-                id="position"
-                name="position"
-                placeholder={intl.formatMessage({
-                  id: 'app.pages.contactUs.label.job',
-                })}
-                type="text"
-                {...register('position', { required: true })}
-              />
-            </div>
-          </div>
-          <div className="area-text">
-            <Label for="message">
-              {intl.formatMessage({
-                id: 'app.pages.contactUs.label.message',
-              })}
-            </Label>
-            <input
-              className="form-input"
-              id="message"
-              name="message"
-              type="textarea"
-              placeholder={intl.formatMessage({
-                id: 'app.pages.contactUs.label.message-opt',
-              })}
-              {...register('message', { required: true })}
-            />
-          </div>
-          <Button color="primary" id="btn-send" /* disabled={} */>
-            {intl.formatMessage({
-              id: 'app.pages.contactUs.label.send',
-            })}
-          </Button>
-        </form>
+              </Button>
+            </form>
+          </>
+        )}
+
         {/* loading && <Loader /> */}
         {message && <p bgColor="#01c268">{message}</p>}
       </div>
