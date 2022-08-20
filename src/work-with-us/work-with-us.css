@@ -43,8 +43,11 @@
   box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .form-inputs {
     flex-direction: column;
+  }
+  .work-with-us-content {
+    width: 90%;
   }
 }

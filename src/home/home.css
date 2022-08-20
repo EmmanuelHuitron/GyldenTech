@@ -247,6 +247,11 @@
 .sec-right h3 {
   color: #000000;
 }
+.sec-carrousel .sec-right p {
+  max-height: 245px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .sec-buttons {
   width: 110%;
   top: 50%;
@@ -718,6 +723,13 @@
   .card-reseller2,
   .card-reseller4 {
     flex-direction: column-reverse !important;
+  }
+  .nav-item .nav-link {
+    margin-left: 11px;
+    padding-left: 0 !important;
+    padding-bottom: 2px !important;
+    border-bottom: 1px solid #0084ff;
+    margin-bottom: 15px;
   }
   .spw-logo {
     width: 77px;
