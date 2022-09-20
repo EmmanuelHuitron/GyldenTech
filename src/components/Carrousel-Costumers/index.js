@@ -171,7 +171,8 @@ export default function Carousel(props) {
               desagregación de inventarios, célula de recursos dedicada,
               desarrollo de integración de crédito Elektra, entre muchos otros.
             </p>
-            <a href="https://www.elektra.com.gt">elektra.com.gt</a>
+            <br></br>
+            <a href="https://www.elektra.com.gt">elektra.com.gt </a>
           </div>
         ) : selectedImage === text[3] ? (
           <div className="sec-right">
@@ -189,23 +190,31 @@ export default function Carousel(props) {
           <div className="sec-right">
             <h3>La Marina</h3>
             <p>
-              Lanzamiento del sitio web B2B. Más de 20,000 clientes, diferentes
-              listas de precios por mostrador/sucursal, usuarios para compras
-              múltiples, precios e inventario real time, diferentes entregas
-              (same day, next day, entrega nocturna).
+              Desde hace 135 años, La Marina va con tu estilo! y desde entonces,
+              ofrecen las mejores experiencias para sus clientes desde sus
+              tiendas Departamentales y su tienda online, logrando ofrecer
+              experiencias únicas, irrepetibles y omnicanales. Un ejemplo de
+              esto es la entrega 2 horas que puedes realizar comprando desde su
+              sitio web o también su experiencia de Mesa de Regalos… Sin duda
+              alguna, La Marina ha y seguirá apostando por robustecer su
+              experiencia online para los consumidores más exigentes de la
+              región.
             </p>
-            <a href="https://i22.nadro.mx">i22.nadro.mx</a>
+            <a href="https://www.lamarina.com.mx/">lamarina.com.mx</a>
           </div>
         ) : selectedImage === text[5] ? (
           <div className="sec-right">
             <h3>ESSITY</h3>
             <p>
-              Lanzamiento del sitio web B2B. Más de 20,000 clientes, diferentes
-              listas de precios por mostrador/sucursal, usuarios para compras
-              múltiples, precios e inventario real time, diferentes entregas
-              (same day, next day, entrega nocturna).
+              Estrategia regional de comunicación y D2C para las marcas más
+              representativas en temas de CPG, como lo son: Saba Intimawear,
+              Tena, Tork, Jobst en países como México, Brazil, Costa Rica,
+              Chile, etc. El objetivo de Essity es lograr comunicar mediante
+              contenido educativo, los problemas pero sobre todo, como ellos
+              pueden apoyar que estos mismos sean mucho más “llevaderos” con sus
+              productos.
             </p>
-            <a href="https://i22.nadro.mx">i22.nadro.mx</a>
+            <a href="https://www.tena.com.mx/">tena.com.mx</a>
           </div>
         ) : (
           <></>

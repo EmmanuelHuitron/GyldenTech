@@ -40,34 +40,65 @@ const ModalWork = ({ handleClick, work, open }) => {
           )}
 
           <div className="skills">
-            <div className="skills-left">
-              {findWork?.SoftSkills !== [] ? (
-                <>
-                  <h4>SOFT SKILLS</h4>
-                  <ul>
-                    {findWork?.SoftSkills.map((sskills, i) => {
-                      return <li key={i}>{sskills}</li>
-                    })}
-                  </ul>
-                </>
-              ) : (
-                <></>
-              )}
-            </div>
-            <div className="skills-right">
-              {findWork?.TechSkills !== [] ? (
-                <>
-                  <h4>TECH SKILLS</h4>
-                  <ul>
-                    {findWork?.TechSkills.map((tskills, i) => {
-                      return <li key={i}>{tskills}</li>
-                    })}
-                  </ul>
-                </>
-              ) : (
-                <></>
-              )}
-            </div>
+            {window.screen.width > 900 ? (
+              <>
+                <div className="skills-left">
+                  {findWork?.SoftSkills.length > 0 ? (
+                    <>
+                      <h4>SOFT SKILLS</h4>
+                      <ul>
+                        {findWork?.SoftSkills.map((sskills, i) => {
+                          return <li key={i}>{sskills}</li>
+                        })}
+                      </ul>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+                <div className="skills-right">
+                  {findWork?.TechSkills.length > 0 ? (
+                    <>
+                      <h4>TECH SKILLS</h4>
+                      <ul>
+                        {findWork?.TechSkills.map((tskills, i) => {
+                          return <li key={i}>{tskills}</li>
+                        })}
+                      </ul>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+              </>
+            ) : (
+              <div className="skills-mobile">
+                {findWork?.SoftSkills.length > 0 ? (
+                  <>
+                    <h4>SOFT SKILLS</h4>
+                    <ul>
+                      {findWork?.SoftSkills.map((sskills, i) => {
+                        return <li key={i}>{sskills}</li>
+                      })}
+                    </ul>
+                  </>
+                ) : (
+                  <></>
+                )}
+                {findWork?.TechSkills.length > 0 ? (
+                  <>
+                    <h4>TECH SKILLS</h4>
+                    <ul>
+                      {findWork?.TechSkills.map((tskills, i) => {
+                        return <li key={i}>{tskills}</li>
+                      })}
+                    </ul>
+                  </>
+                ) : (
+                  <></>
+                )}
+              </div>
+            )}
           </div>
         </ModalBody>
         <ModalFooter>

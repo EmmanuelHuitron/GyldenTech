@@ -57,7 +57,7 @@ const Partners = () => {
               })}
             </CardTitle>
             <NavItem>
-              <NavLink href="#">
+              <NavLink href="http://ec2-52-14-97-45.us-east-2.compute.amazonaws.com/login">
                 {intl.formatMessage({
                   id: 'app.pages.home.sectionResellers.label.link',
                 })}

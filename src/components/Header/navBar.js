@@ -35,14 +35,14 @@ const NavBar = ({ open, handleClick }) => {
         {window.screen.width > 1300 ? (
           <div className="menu-content">
             <div className="nav-link">
-              <a href="#know-us" style={{ color: '#FFFFFF' }}>
+              <a href="/know-us" style={{ color: '#FFFFFF' }}>
                 {intl.formatMessage({
                   id: 'app.components.header.label.knowus',
                 })}
               </a>
             </div>
             <div className="nav-link">
-              <a href="#services" style={{ color: '#FFFFFF' }}>
+              <a href="/services" style={{ color: '#FFFFFF' }}>
                 {intl.formatMessage({
                   id: 'app.components.header.label.services',
                 })}
@@ -91,62 +91,62 @@ const NavBar = ({ open, handleClick }) => {
           </div>
         ) : (
           <div className="menu-content">
-            <div className="nav-link">
+            <div className="nav-link" onClick={handleClick}>
               <a href="#know-us" style={{ color: '#FFFFFF' }}>
                 {intl.formatMessage({
                   id: 'app.components.header.label.knowus',
                 })}
               </a>
             </div>
-            <div className="nav-link">
+            <div className="nav-link" onClick={handleClick}>
               <a href="#services" style={{ color: '#FFFFFF' }}>
                 {intl.formatMessage({
                   id: 'app.components.header.label.services',
                 })}
               </a>
             </div>
-            <div className="nav-link">
+            <div className="nav-link" onClick={handleClick}>
               <a href="#partners" style={{ color: '#FFFFFF' }}>
                 {intl.formatMessage({
                   id: 'app.components.header.label.partners',
                 })}
               </a>
             </div>
-            <div className="nav-link">
+            <div className="nav-link" onClick={handleClick}>
               <a href="#awards-and-certifications" style={{ color: '#FFFFFF' }}>
                 {intl.formatMessage({
                   id: 'app.components.header.label.awards',
                 })}
               </a>
             </div>
-            <div className="nav-link">
+            <div className="nav-link" onClick={handleClick}>
               <a href="#technologies" style={{ color: '#FFFFFF' }}>
                 {intl.formatMessage({
                   id: 'app.components.header.label.technologies',
                 })}
               </a>
             </div>
-            <div className="nav-link">
+            <div className="nav-link" onClick={handleClick}>
               <a href="#costumers" style={{ color: '#FFFFFF' }}>
                 {intl.formatMessage({
                   id: 'app.components.header.label.customers',
                 })}
               </a>
             </div>
-            <div className="nav-link">
+            <div className="nav-link" onClick={handleClick}>
               <a href="#resellers" style={{ color: '#FFFFFF' }}>
                 {intl.formatMessage({
                   id: 'app.components.header.label.resellers',
                 })}
               </a>
             </div>
-            <div className="nav-link">
+            <div className="nav-link" onClick={handleClick}>
               <a href="#work-with-us" style={{ color: '#FFFFFF' }}>
                 {intl.formatMessage({ id: 'app.components.header.label.work' })}
               </a>
             </div>
 
-            <Link to="/contact-us">
+            <Link to="/contact-us" onClick={handleClick}>
               <Button variant="light">
                 {intl.formatMessage({
                   id: 'app.components.header.label.contact-us',

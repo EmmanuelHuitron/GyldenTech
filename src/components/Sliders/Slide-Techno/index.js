@@ -6,6 +6,9 @@ import tech3 from '../../../img/Java.png'
 import tech4 from '../../../img/Mongo.png'
 import tech5 from '../../../img/mysql 1.png'
 import tech6 from '../../../img/Node.png'
+import tech7 from '../../../img/AngularJS.png'
+import tech8 from '../../../img/Microsoft-dotNET.png'
+import tech9 from '../../../img/react-js.png'
 
 const SliderTechno = () => {
   const settings = {
@@ -65,6 +68,15 @@ const SliderTechno = () => {
         </div>
         <div>
           <img src={tech6} alt="pay6" style={{ maxWidth: '180px' }} />
+        </div>
+        <div>
+          <img src={tech7} alt="pay7" style={{ maxWidth: '150px' }} />
+        </div>
+        <div>
+          <img src={tech8} alt="pay8" style={{ maxWidth: '150px' }} />
+        </div>
+        <div>
+          <img src={tech9} alt="pay9" style={{ maxWidth: '140px' }} />
         </div>
       </Slider>
     </div>

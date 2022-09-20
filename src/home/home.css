@@ -288,6 +288,7 @@
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  align-items: center;
   /* overflow: auto; */
 }
 
@@ -425,6 +426,7 @@
 .modal-DiseñadorUXSenior p {
   font-size: 13px;
 }
+/* 
 .modal-DesarrolladorBackEnd .skills ul li,
 .modal-SalesRep .skills ul li,
 .modal-Monitoring .skills ul li,
@@ -439,14 +441,14 @@
   font-size: 13px;
   list-style: none;
   text-align: left;
-}
-.modal-ScrumMaster .skills {
+} */
+/* .modal-ScrumMaster .skills {
   margin-top: 0 !important;
-}
-.modal-ScrumMaster .skills ul li {
+} */
+/* .modal-ScrumMaster .skills ul li {
   list-style: disc;
   font-size: 13px;
-}
+} */
 
 .skills {
   max-height: 250px;
@@ -467,6 +469,9 @@
 .modal-Becarios .skills .skills-left,
 .modal-Becarios .skills .skills-right {
   margin: 0 20px;
+}
+.modal-Becarios .funciones {
+  max-height: 100% !important;
 }
 .skills-left,
 .skills-right {
@@ -709,12 +714,17 @@
   }
   .costumers1,
   .costumers2 {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-gap: 10px;
     justify-content: center;
   }
   .costumers1 img,
   .costumers2 img {
     margin: 0 10px;
+    align-self: center;
+    justify-self: center;
   }
   .card-reseller1,
   .card-reseller3 {
@@ -749,6 +759,9 @@
   .sec-workUs .sec-content {
     flex-direction: column;
     align-items: center;
+  }
+  .modal-content {
+    height: 90% !important;
   }
   .sec-workUs .card:nth-child(even) {
     margin: 40px 0;

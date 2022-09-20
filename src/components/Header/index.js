@@ -231,7 +231,7 @@ const Header = () => {
           <Hamburger open={open} handleClick={handleClick} />
         </div>
       )}
-      {y < 1000 && (
+      {y < 800 && (
         <div className="socials-header">
           <a href="https://www.instagram.com/vinnerenmx/">
             <svg
