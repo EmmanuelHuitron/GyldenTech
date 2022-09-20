@@ -35,14 +35,14 @@ const NavBar = ({ open, handleClick }) => {
         {window.screen.width > 1300 ? (
           <div className="menu-content">
             <div className="nav-link">
-              <a href="/know-us" style={{ color: '#FFFFFF' }}>
+              <a href="#know-us" style={{ color: '#FFFFFF' }}>
                 {intl.formatMessage({
                   id: 'app.components.header.label.knowus',
                 })}
               </a>
             </div>
             <div className="nav-link">
-              <a href="/services" style={{ color: '#FFFFFF' }}>
+              <a href="#services" style={{ color: '#FFFFFF' }}>
                 {intl.formatMessage({
                   id: 'app.components.header.label.services',
                 })}
