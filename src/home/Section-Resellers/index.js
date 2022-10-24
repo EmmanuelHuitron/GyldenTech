@@ -57,7 +57,7 @@ const Partners = () => {
               })}
             </CardTitle>
             <NavItem>
-              <NavLink href="http://ec2-52-14-97-45.us-east-2.compute.amazonaws.com/login">
+              <NavLink href="https://www.styrk.io/">
                 {intl.formatMessage({
                   id: 'app.pages.home.sectionResellers.label.link',
                 })}
@@ -120,7 +120,7 @@ const Partners = () => {
               })}
             </CardTitle>
             <NavItem>
-              <NavLink href="#">
+              <NavLink href="https://www.styrk.io/mdr.html">
                 {intl.formatMessage({
                   id: 'app.pages.home.sectionResellers.label.link',
                 })}
@@ -241,7 +241,7 @@ const Partners = () => {
               })}
             </CardTitle>
             <NavItem>
-              <NavLink href="#">
+              <NavLink href="https://janis.im/">
                 {intl.formatMessage({
                   id: 'app.pages.home.sectionResellers.label.link',
                 })}

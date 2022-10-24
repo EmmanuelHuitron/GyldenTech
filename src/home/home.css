@@ -367,7 +367,7 @@
   flex-wrap: wrap;
 }
 .sec-workUs .card {
-  width: 330px;
+  width: 320px;
   height: 300px;
   background: #f8f8f8;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
@@ -418,6 +418,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
 }
 .modal-work p {
   font-size: 15px;

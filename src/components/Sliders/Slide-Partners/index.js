@@ -54,7 +54,7 @@ const SliderPartner = () => {
           <img src={pay1} alt="pay1" style={{ maxWidth: '145px' }} />
         </div>
         <div>
-          <img src={pay2} alt="pay2" style={{ maxWidth: '165px' }} />
+          <img src={pay2} alt="pay2" style={{ maxWidth: '135px' }} />
         </div>
         <div>
           <img src={pay3} alt="pay3" style={{ maxWidth: '165px' }} />
@@ -69,7 +69,7 @@ const SliderPartner = () => {
           <img src={pay6} alt="pay6" style={{ maxWidth: '165px' }} />
         </div>
         <div>
-          <img src={pay7} alt="pay7" style={{ maxWidth: '165px' }} />
+          <img src={pay7} alt="pay7" style={{ maxWidth: '155px' }} />
         </div>
         <div>
           <img src={pay8} alt="pay8" style={{ maxWidth: '165px' }} />
