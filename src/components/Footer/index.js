@@ -68,7 +68,7 @@ const Footer = () => {
       <div className="country1">
         <h3>México</h3>
         <p className="text-footer contact">
-          ventas@vinneren.com.mx <br /> 55 4441 9382
+          ventas@vinneren.com.mx <br /> 55 1656 7588
         </p>
       </div>
       <div className="country2">

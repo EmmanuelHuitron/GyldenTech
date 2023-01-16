@@ -6,6 +6,7 @@ import { Label, Button } from 'reactstrap'
 
 import { useForm } from 'react-hook-form'
 import { jobsObj } from '../components/Modals/Modal-Work-With-Us/jobs'
+import Loader from '../components/Loader'
 import './work-with-us.css'
 import './input-file.css'
 
@@ -19,9 +20,10 @@ const WorkWithUs = () => {
   const [value, SetValue] = useState('')
   const [valueFile, setValueFile] = useState('')
   const [message, setMessage] = useState(null)
+  const [loader, setLoader] = useState(false)
 
   const onSubmit = data => {
-    console.log(data.cvFile[0])
+    setLoader(true)
     const formData = new FormData()
     formData.append('email', data.email)
     formData.append('fullName', data.fullName)
@@ -52,6 +54,7 @@ const WorkWithUs = () => {
             window.location.reload()
           }, 2000)
         }
+        setLoader(false)
       })
   }
   return (
@@ -68,6 +71,8 @@ const WorkWithUs = () => {
               id: 'app.pages.contactUs.label.subtitle',
             })}
           </h4>
+          {loader && <Loader />}
+          {message && <p>{message}</p>}
           <form onSubmit={handleSubmit(onSubmit)}>
             {window.screen.width > 768 ? (
               <div className="form-inputs">
@@ -415,7 +420,6 @@ const WorkWithUs = () => {
             />
           )} */}
         </div>
-        {message && <p>{message}</p>}
       </div>
     </>
   )
