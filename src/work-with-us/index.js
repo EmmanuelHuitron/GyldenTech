@@ -33,15 +33,18 @@ const WorkWithUs = () => {
     formData.append('phoneNumber', data.phoneNumber)
     formData.append('requiredPosition', data.requiredPosition)
 
-    fetch('http://18.233.28.20/vinnerenContact/jobApplication', {
-      method: 'POST',
-      body: formData,
-      headers: {
-        /* 'Content-Type': 'multipart/form-data', */
-        ApiKey:
-          'TpQFV1OVMGg7HwnSMZ9IPXtZUBt7wVoTWp1mTL9W3Skiu3qrghAErESRemSAW6oj',
+    fetch(
+      'https://api.vinneren.com.mx/forms-v1/vinnerenContact/jobApplication',
+      {
+        method: 'POST',
+        body: formData,
+        headers: {
+          /* 'Content-Type': 'multipart/form-data', */
+          ApiKey:
+            'TpQFV1OVMGg7HwnSMZ9IPXtZUBt7wVoTWp1mTL9W3Skiu3qrghAErESRemSAW6oj',
+        },
       },
-    })
+    )
       .then(response => response.json())
       .then(data => {
         const { hasError, message } = data
