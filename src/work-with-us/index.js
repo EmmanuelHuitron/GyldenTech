@@ -33,18 +33,15 @@ const WorkWithUs = () => {
     formData.append('phoneNumber', data.phoneNumber)
     formData.append('requiredPosition', data.requiredPosition)
 
-    fetch(
-      'https://api.vinneren.com.mx/forms-v1/vinnerenContact/jobApplication',
-      {
-        method: 'POST',
-        body: formData,
-        headers: {
-          /* 'Content-Type': 'multipart/form-data', */
-          ApiKey:
-            'TpQFV1OVMGg7HwnSMZ9IPXtZUBt7wVoTWp1mTL9W3Skiu3qrghAErESRemSAW6oj',
-        },
+    fetch('http://18.233.28.20/vinnerenContact/jobApplication', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        /* 'Content-Type': 'multipart/form-data', */
+        ApiKey:
+          'TpQFV1OVMGg7HwnSMZ9IPXtZUBt7wVoTWp1mTL9W3Skiu3qrghAErESRemSAW6oj',
       },
-    )
+    })
       .then(response => response.json())
       .then(data => {
         const { hasError, message } = data
@@ -72,7 +69,7 @@ const WorkWithUs = () => {
             })}
           </h4>
           {loader && <Loader />}
-          {message && <p>{message}</p>}
+          {message && <p style={{ color: '#0F0' }}>{message}</p>}
           <form onSubmit={handleSubmit(onSubmit)}>
             {window.screen.width > 768 ? (
               <div className="form-inputs">
@@ -404,7 +401,7 @@ const WorkWithUs = () => {
               />
               {/* errors.message && <p style={styles}>{errors.message}</p> */}
             </div>
-            <Button color="primary" id="btn-send">
+            <Button color="primary" id="btn-send" disabled={loader}>
               {intl.formatMessage({
                 id: 'app.pages.work-with-us.label.apply',
               })}
