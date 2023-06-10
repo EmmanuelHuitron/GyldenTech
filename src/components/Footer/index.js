@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 import { useIntl } from 'react-intl'
 import './footer.css'
 import { ReactComponent as AnvoIcon } from '../../img/afiliado-amvo.svg'
@@ -149,10 +149,12 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <Link to="/politica-de-privacidad">
-        {intl.formatMessage({
-                    id: 'app.pages.footer.privacidad',
-                  })}
+        <Link to="/terms&conditions" style={{textDecoration: 'none', color: 'white'}}>
+          <text>
+            {intl.formatMessage({
+              id: 'app.pages.footer.privacidad',
+            })}
+          </text>
         </Link>
       </div>
     </div>
