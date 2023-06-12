@@ -66,8 +66,8 @@ const Footer = () => {
             </clipPath>
           </defs>
         </svg>
-        <div>
-          <Link to="/terms&conditions" style={{textDecoration: 'none', color: 'white', fontSize:'14px'}}>
+        <div style={{marginBottom: '8px'}}>
+          <Link to="/terms&conditions" style={{ color: 'white', fontSize:'14px'}}>
             <text>
               {intl.formatMessage({
                 id: 'app.pages.footer.privacidad',
