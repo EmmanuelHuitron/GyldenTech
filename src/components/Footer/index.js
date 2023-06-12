@@ -66,6 +66,15 @@ const Footer = () => {
             </clipPath>
           </defs>
         </svg>
+        <div>
+          <Link to="/terms&conditions" style={{textDecoration: 'none', color: 'white', fontSize:'14px'}}>
+            <text>
+              {intl.formatMessage({
+                id: 'app.pages.footer.privacidad',
+              })}
+            </text>
+          </Link>
+        </div>
         <p className="text-footer"> © 2022 Vinneren. All rights reserved</p>
       </div>
       <div className="country1">
@@ -147,15 +156,6 @@ const Footer = () => {
         <div>
           <AnvoIcon width="160px" />
         </div>
-      </div>
-      <div>
-        <Link to="/terms&conditions" style={{textDecoration: 'none', color: 'white'}}>
-          <text>
-            {intl.formatMessage({
-              id: 'app.pages.footer.privacidad',
-            })}
-          </text>
-        </Link>
       </div>
     </div>
   )

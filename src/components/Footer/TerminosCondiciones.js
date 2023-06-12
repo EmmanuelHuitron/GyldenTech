@@ -3,7 +3,7 @@ import './style-terms.css'
 const TerminosCondiciones = () => {
   return (
     <div className="principal">
-      <h1 className="title" >Términos y Condiciones de Uso</h1>
+      <h1 className="title" id="title" >Términos y Condiciones de Uso</h1>
       <p style={{marginBottom: '30px'}}>
         Los Términos y Condiciones (en adelante los &quot;Términos y Condiciones&quot;)
         son aplicables por el simple acceso a cualquiera de nuestras páginas,
