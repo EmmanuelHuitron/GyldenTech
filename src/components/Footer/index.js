@@ -66,7 +66,8 @@ const Footer = () => {
             </clipPath>
           </defs>
         </svg>
-        <div style={{marginBottom: '8px'}}>
+        <p className="text-footer"> © 2022 Vinneren. All rights reserved</p>
+        <div style={{marginTop: '0px'}}>
           <Link to="/terms&conditions" style={{ color: 'white', fontSize:'14px'}}>
             <text>
               {intl.formatMessage({
@@ -75,7 +76,6 @@ const Footer = () => {
             </text>
           </Link>
         </div>
-        <p className="text-footer"> © 2022 Vinneren. All rights reserved</p>
       </div>
       <div className="country1">
         <h3>México</h3>
