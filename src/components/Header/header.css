@@ -96,7 +96,7 @@
   position: relative;
   width: 100%;
   height: 90px;
-  background: #003edf;
+  background: #780236;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -111,11 +111,18 @@
   display: flex;
   justify-content: space-around;
 }
+.menu-content a{
+  text-decoration: none;
+}
+.menu-content a button{
+  background-color: #780236 !important;
+  text-decoration: none;
+}
 .nav-bar .nav-link a {
   text-decoration: none;
 }
 .btn-inter {
-  display: flex;
+  display: none;
 }
 .btn-light:hover {
   background: #02245b;

@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { ReactComponent as CloseIcon } from '../../../icons/X.svg'
-import { ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap'
+import { ModalHeader, ModalBody} from 'reactstrap'
 import { jobsObj } from './jobs'
 const ModalWork = ({ handleClick, work, open }) => {
   const [findWork, setFindWork] = useState(
@@ -101,11 +100,7 @@ const ModalWork = ({ handleClick, work, open }) => {
             )}
           </div>
         </ModalBody>
-        <ModalFooter>
-          <Link to="/work-with-us">
-            <Button color="primary">Postularme</Button>
-          </Link>
-        </ModalFooter>
+      
       </div>
     </>
   )

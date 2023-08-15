@@ -18,6 +18,10 @@ h3 {
 .text-footer.contact{
     font-size: 18px;
 }
+.text-footer.contact b{
+    padding-left: 32px;
+    font-weight: 400;
+}
 .vinn,
 .country1,
 .country2{

@@ -95,7 +95,7 @@ const Services = () => {
             <CardBody>
               <CardTitle
                 style={{
-                  maxWidth: '130px',
+                  maxWidth: '180px',
                   fontSize: '24px',
                   fontWeight: '700',
                 }}

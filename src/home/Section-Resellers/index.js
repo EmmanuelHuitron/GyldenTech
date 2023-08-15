@@ -13,12 +13,7 @@ import {
 import rese1 from '../../img/Loolu.png'
 import logo1 from '../../img/Loolu-logo.png'
 import rese2 from '../../img/Mdr.png'
-import logo2 from '../../img/Mdr-logo.png'
-import rese3 from '../../img/spw.png'
-import logo3 from '../../img/spw-logo.png'
-import rese4 from '../../img/Janis.png'
-import logo4 from '../../img/Janis-logo.png'
-import logospw from '../../img/spw-icon.png'
+
 
 const Partners = () => {
   const intl = useIntl()

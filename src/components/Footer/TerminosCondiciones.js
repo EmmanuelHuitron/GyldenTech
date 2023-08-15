@@ -9,8 +9,8 @@ const TerminosCondiciones = () => {
         son aplicables por el simple acceso a cualquiera de nuestras páginas,
         aplicaciones web, software, aplicaciones móviles y por el uso de los
         servicios (en adelante los &quot;Servicios&quot;) ofrecidos o puestos a
-        disposición por VINNEREN CONSULTING, S.A. de C.V. (&quot;Vinneren&quot;), a través
-        del Sitio <a href="www.vinneren.com.mx">www.vinneren.com.mx</a> (en
+        disposición por GYLDEN TECH CONSULTING, S.A. de C.V. (&quot;Gylden Tech&quot;), a través
+        del Sitio <a href="www.gylden.com.mx">www.gylden.com.mx</a> (en
         adelante el &quot;Sitio&quot;), por lo que el Usuario (persona que usa o accede al
         &quot;Sitio&quot; mediante cualquier equipo de cómputo o dispositivo; en adelante
         el &quot;Usuario&quot;), acepta y se obliga a su cumplimiento y en el supuesto de
@@ -22,7 +22,7 @@ const TerminosCondiciones = () => {
       <p>
         El uso del &quot;Sitio&quot; implica al &quot;Usuario&quot; la aceptación expresa, plena y
         sin reservas, de todas y cada una de las cláusulas de los &quot;Términos y
-        Condiciones&quot; los cuales se encontrarán siempre publicados por &quot;Vinneren&quot;
+        Condiciones&quot; los cuales se encontrarán siempre publicados por &quot;Gylden Tech&quot;
         en el &quot;Sitio&quot;, y los mismos podrán ser modificados de manera
         discrecional en cualquier momento, sin necesidad de previo aviso. Su
         última versión/actualización se encontrará establecida al final de este
@@ -34,7 +34,7 @@ const TerminosCondiciones = () => {
         condiciones complementarios, presentes o futuros.
       </p>
       <p>
-        &quot;Vinneren&quot;, tendrá en todo momento derecho a negar, restringir o
+        &quot;Gylden Tech&quot;, tendrá en todo momento derecho a negar, restringir o
         condicionar el acceso al &quot;Sitio&quot;, y a modificar los servicios y
         contenidos del mismo en cualquier momento y sin necesidad alguna de
         aviso previo.
@@ -45,12 +45,12 @@ const TerminosCondiciones = () => {
         podrán ser utilizados con posterioridad a su contratación, activación o
         registro y mediante el pago de éstos, lo cual se hará posterior a tener
         el contacto directo a través del Formulario que se presenta en el
-        &quot;Sitio&quot; y a través del cual &quot;Vinneren&quot; y el &quot;Usuario&quot; convendrán los
+        &quot;Sitio&quot; y a través del cual &quot;Gylden Tech&quot; y el &quot;Usuario&quot; convendrán los
         servicios requeridos y su costo, sin que en el &quot;Sitio&quot; se contemple la
         posibilidad de pago en línea.
       </p>
       <p>
-        &quot;Vinneren&quot; no garantiza la disponibilidad y continuidad de los servicios
+        &quot;Gylden Tech&quot; no garantiza la disponibilidad y continuidad de los servicios
         y contenido del &quot;Sitio&quot; en relación con alguna actividad específica,
         independientemente del medio de acceso del &quot;Usuario&quot; y no será
         responsable por el daño o pérdida de cualquier naturaleza que pueda ser
@@ -71,14 +71,14 @@ const TerminosCondiciones = () => {
       <p style={{marginBottom: '30px'}}>
         El &quot;Usuario&quot; no podrá colocar o utilizar los servicios y contenido del
         &quot;Sitio&quot; en otros sitios o páginas, propias ni de terceros, sin la previa
-        autorización por escrito de &quot;Vinneren&quot;, ni impedir a otros Usuarios el
+        autorización por escrito de &quot;Gylden Tech&quot;, ni impedir a otros Usuarios el
         uso del &quot;Sitio&quot;.
       </p>
 
       <h3 className="subtitle-h3">C. REGISTRO.</h3>
       <p>
         El &quot;Sitio&quot; ofrece al &quot;Usuario&quot; la posibilidad de registrarse mediante el
-        envío de sus datos de contacto (&quot;Datos de Contacto&quot;) a &quot;Vinneren&quot; con la
+        envío de sus datos de contacto (&quot;Datos de Contacto&quot;) a &quot;Gylden Tech&quot; con la
         finalidad de que ésta pueda entrar en comunicación directa con el
         &quot;Usuario&quot; para verificar los Servicios que éste requiere y comentar los
         procesos, costos y detalles de su requerimiento.
@@ -91,7 +91,7 @@ const TerminosCondiciones = () => {
       </p>
       <p>
         En caso de que el &quot;Usuario&quot; proporcione información falsa, incorrecta o
-        inexacta o que &quot;Vinneren&quot; tenga la sospecha de que dicha información lo
+        inexacta o que &quot;Gylden Tech&quot; tenga la sospecha de que dicha información lo
         sea, la Empresa tendrá el derecho de suspender o terminar la posibilidad
         del &quot;Usuario&quot; de contratar o usar los Servicios, así como rechazar
         cualquier nuevo o futuro servicio al &quot;Usuario&quot;.
@@ -101,7 +101,7 @@ const TerminosCondiciones = () => {
         contacto para detalles de los servicios que requiera el &quot;Usuario&quot;.
       </p>
       <p style={{marginBottom: '30px'}}>
-        &quot;Vinneren&quot; se obliga a mantener confidencial la información que reciba
+        &quot;Gylden Tech&quot; se obliga a mantener confidencial la información que reciba
         del &quot;Usuario&quot; a través del Formulario de &quot;Datos de Contacto&quot; que tengan
         dicho carácter conforme a la legislación aplicable en los Estados Unidos
         Mexicanos, pudiendo divulgar su información a las autoridades
@@ -125,7 +125,7 @@ const TerminosCondiciones = () => {
         bajo ningún impedimento legal o de hecho para contratar.
       </p>
       <p style={{marginBottom: '30px'}}>
-        El &quot;Usuario&quot; se obliga a sacar a salvo y en paz a &quot;Vinneren&quot;, sus
+        El &quot;Usuario&quot; se obliga a sacar a salvo y en paz a &quot;Gylden Tech&quot;, sus
         accionistas, subsidiarias, afiliadas, funcionarios, empleados, asesores,
         apoderados y/o representantes, y en general a cualquier persona física o
         moral relacionada con ésta, respecto del uso de la información o
@@ -172,18 +172,18 @@ const TerminosCondiciones = () => {
         </li>
         <li>
           Reproducir, duplicar, copiar, vender total o parcialmente el contenido
-          del &quot;Sitio&quot; sin el consentimiento expreso y por escrito de &quot;Vinneren&quot;.
+          del &quot;Sitio&quot; sin el consentimiento expreso y por escrito de &quot;Gylden Tech&quot;.
         </li>
       </ul>
       <h3 className="subtitle-h3">F. TERCEROS ENLAZADOS.</h3>
       <p style={{marginBottom: '30px'}}>
         La mención en el “Sitio” de nombres de nuestros Partners, no implica la
-        recomendación, garantía, patrocinio o aprobación por parte de “Vinneren”
+        recomendación, garantía, patrocinio o aprobación por parte de “Gylden Tech”
         respecto de su información, bienes o servicios, toda vez que los mismos,
         son ofertados por esos terceros o por sitios vinculados y no son
-        responsabilidad de “Vinneren”, por lo que ésta no se hace responsable
+        responsabilidad de “Gylden Tech”, por lo que ésta no se hace responsable
         por cualquier asunto relacionado con la prestación o venta de cualquier
-        servicio, bien o producto de los terceros. “Vinneren” se limita única y
+        servicio, bien o producto de los terceros. “Gylden Tech” se limita única y
         exclusivamente para conveniencia y conocimiento del “Usuario” a informar
         sobre los Partners sin que en ningún caso sea su responsabilidad ya que
         no existe ningún tipo de relación laboral. Toda asesoría, consejo,
@@ -194,7 +194,7 @@ const TerminosCondiciones = () => {
       <h3 className="subtitle-h3">G. PROPIEDAD INTELECTUAL. DERECHOS RESERVADOS.</h3>
       <p>
         Todos los derechos del “Sitio” están reservados y pertenecen a
-        “Vinneren”. Su contenido, así como la marca VINNEREN, el software, la
+        “Gylden Tech”. Su contenido, así como la marca GYLDEN TECH, el software, la
         base de datos, derechos de propiedad intelectual, derechos de autor,
         propiedad industrial, signos distintivos y dominio del “Sitio” y los
         diseños en general, su uso, divulgación, reproducción, distribución,
@@ -216,7 +216,7 @@ const TerminosCondiciones = () => {
 
       <h3 className="subtitle-h3">H. CALIDAD DE LOS SERVICIOS Y CONTENIDOS.</h3>
       <p>
-        Ni “Vinneren”, ni sus proveedores, empleados, representantes o partners,
+        Ni “Gylden Tech”, ni sus proveedores, empleados, representantes o partners,
         serán responsables de cualquier daño o perjuicio que pudiera tener el
         “Usuario” derivado de inexactitudes, errores, cambios o mejoras que se
         realicen respecto de los servicios contratados o el contenido del
@@ -225,7 +225,7 @@ const TerminosCondiciones = () => {
         asesoría de acuerdo a las necesidades del “Usuario”.
       </p>
       <p style={{marginBottom: '30px'}}>
-        “Vinneren” ofrece sus servicios con un nivel de competencia y diligencia
+        “Gylden Tech” ofrece sus servicios con un nivel de competencia y diligencia
         óptimos desde un punto de vista comercial y tecnológico y no manifiesta
         ninguna representación o garantía de ningún tipo en relación con la
         operación del “Sitio”, su contenido, materiales o servicios incluidos.
@@ -243,10 +243,10 @@ const TerminosCondiciones = () => {
       <h3 className="subtitle-h3">J. LEYES APLICABLES Y JURISDICCIÓN.</h3>
       <p style={{marginBottom: '30px'}}>
         Toda controversia, reclamación o diferencia derivada de estos Términos y
-        Condiciones, podrán ser sometidas a arbitraje a elección de “Vinneren”,
+        Condiciones, podrán ser sometidas a arbitraje a elección de “Gylden Tech”,
         en la Ciudad de México, México, y están regidos por las leyes vigentes
         en los Estados Unidos Mexicanos siempre y cuando las legislaciones
-        locales en donde “Vinneren” ofrezca sus servicios, lo permitan.
+        locales en donde “Gylden Tech” ofrezca sus servicios, lo permitan.
       </p>
 
       <h3 className="subtitle-h3">K. CONTACTO.</h3>
@@ -254,7 +254,7 @@ const TerminosCondiciones = () => {
         En caso de requerirlo, el “Usuario” podrá contactarnos para cualquier
         aclaración, duda, comentario o sugerencia relacionada con los servicios,
         el “Sitio” o estos “Términos y Condiciones” a través del correo
-        electrónico: contacto@vinneren.com.mx
+        electrónico: contacto@gylden.com.mx
       </p>
     </div>
   )

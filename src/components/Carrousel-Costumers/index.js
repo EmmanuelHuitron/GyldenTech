@@ -8,9 +8,8 @@ export default function Carousel(props) {
     'Casos-de-exito_Nadro.png',
     'Casos-de-exito_Modelorama.png',
     'Casos-de-exito_Ekt.png',
-    'Casos-de-exito_Xiaomi.png',
-    'Casos-de-exito_LaMarina.png',
-    'Casos-de-exito_Essity.png',
+    'Casos-de-exito_Walmart.png',
+    'Casos-de-exito_LaMarina.png'
   ]
   useEffect(() => {
     if (props.autoPlay || !props.showButtons) {
@@ -78,7 +77,7 @@ export default function Carousel(props) {
         </div>
         <div className="img-content" onClick={() => handleClick(2)}>
           <img
-            src={require(`../../img/elektra.png`)}
+            src={require(`../../img/ektmx.png`)}
             alt="carrusel"
             style={{ maxWidth: '169px' }}
           />
@@ -90,9 +89,9 @@ export default function Carousel(props) {
         </div>
         <div className="img-content" onClick={() => handleClick(3)}>
           <img
-            src={require(`../../img/Xiaomi.png`)}
+            src={require(`../../img/walmart.png`)}
             alt="carrusel"
-            style={{ maxWidth: '192px' }}
+            style={{ maxWidth: '169px' }}
           />
           <div
             className={
@@ -112,18 +111,6 @@ export default function Carousel(props) {
             }
           ></div>
         </div>
-        <div className="img-content" onClick={() => handleClick(5)}>
-          <img
-            src={require(`../../img/essity.png`)}
-            alt="carrusel"
-            style={{ maxWidth: '158px' }}
-          />
-          <div
-            className={
-              selectedImage === text[5] ? 'img-select selected' : 'img-select'
-            }
-          ></div>
-        </div>
       </div>
       <div
         className={loaded ? 'sec-carrousel loaded' : 'sec-carrousel'}
@@ -140,7 +127,7 @@ export default function Carousel(props) {
           <div className="sec-right">
             <h3>Nadro</h3>
             <p>
-              Caso más grande B2B de VTEX y Vinneren a nivel mundial. B2B
+              Caso más grande B2B de VTEX y Gylden a nivel mundial. B2B
               cerrado, con más de 20,000 clientes, precio e inventarios en
               tiempo real, varios métodos de entrega. Desarrollo de varios
               componentes personalizados tanto en front end como en back end.
@@ -172,19 +159,17 @@ export default function Carousel(props) {
               desarrollo de integración de crédito Elektra, entre muchos otros.
             </p>
             <br></br>
-            <a href="https://www.elektra.com.gt">elektra.com.gt </a>
+            <a href="https://www.elektra.com.gt">elektra.com.mx </a>
           </div>
         ) : selectedImage === text[3] ? (
           <div className="sec-right">
-            <h3>Xiaomi</h3>
+            <h3>Walmart México y Centroamérica</h3>
             <p>
-              Lanzamiento de su tienda en línea que además fue la primera tienda
-              lanzada en tecnología IO en México. A ésta tienda han seguido el
-              lanzamiento en otros países como USA, Colombia, Perú y
-              próximamente Chile. Recientemente también realizamos el re-diseño
-              de la nueva versión mobile.
+            Creación del sitio de eCommerce in House.
+          Desarrollo de middleware omnicanal y orquestador de pedidos.Implementación de PIM para el control y manejo de todos los productos de los sitios donde Walmart tiene presencia en LATAM.
+
             </p>
-            <a href="https://www.xiaomishop.mx">xiaomishop.mx</a>
+            
           </div>
         ) : selectedImage === text[4] ? (
           <div className="sec-right">
@@ -202,21 +187,7 @@ export default function Carousel(props) {
             </p>
             <a href="https://www.lamarina.com.mx/">lamarina.com.mx</a>
           </div>
-        ) : selectedImage === text[5] ? (
-          <div className="sec-right">
-            <h3>ESSITY</h3>
-            <p>
-              Estrategia regional de comunicación y D2C para las marcas más
-              representativas en temas de CPG, como lo son: Saba Intimawear,
-              Tena, Tork, Jobst en países como México, Brazil, Costa Rica,
-              Chile, etc. El objetivo de Essity es lograr comunicar mediante
-              contenido educativo, los problemas pero sobre todo, como ellos
-              pueden apoyar que estos mismos sean mucho más “llevaderos” con sus
-              productos.
-            </p>
-            <a href="https://www.tena.com.mx/">tena.com.mx</a>
-          </div>
-        ) : (
+        )  : (
           <></>
         )}
         <div className="sec-buttons">
@@ -281,10 +252,6 @@ export default function Carousel(props) {
         <div
           className={selectedImage === text[4] ? 'dot dot-selected' : 'dot'}
           onClick={() => handleClick(4)}
-        ></div>
-        <div
-          className={selectedImage === text[5] ? 'dot dot-selected' : 'dot'}
-          onClick={() => handleClick(5)}
         ></div>
       </div>
     </>

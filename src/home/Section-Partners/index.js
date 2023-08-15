@@ -1,8 +1,6 @@
 import { useIntl } from 'react-intl'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import SliderPartner from '../../components/Sliders/Slide-Partners'
-
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -32,8 +30,25 @@ const Partners = () => {
             id: 'app.pages.home.sectionPartners.label.title',
           })}
         </h2>
+        <div>
+        <img
+            src={require(`../../img/Manhattan-1.png`)}
+            alt="carrusel"
+            style={{ maxWidth: '250px', paddingBottom: '0px', margin: '0 32px' }}
+          />
+          <img
+            src={require(`../../img/Dynamics.png`)}
+            alt="carrusel"
+            style={{ maxWidth: '250px', paddingBottom: '12px', margin: '0 24px  0 0' }}
+          />
+          <img
+            src={require(`../../img/SAP.png`)}
+            alt="carrusel"
+            style={{ maxHeight: '80px', paddingBottom: '5px', margin: '0 32px 0 0' }}
+          />
+        </div>
       </div>
-      <SliderPartner />
+      
     </div>
   )
 }

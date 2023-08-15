@@ -89,12 +89,11 @@ export const jobsObj = [
     TechSkills: ['Jira', 'Excel avanzado', 'Proyect', 'PPT'],
   },
   {
-    name: 'Product Manager',
+    name: 'Business Intelligence',
     image: 'ProductManager.png',
     FuncionesConocimientos:
-      'El rol de Product Manager tiene responsabilidades tanto de entrada como de salida. Las responsabilidades entrantes consisten en trabajar con el equipo de tecnología para ofrecer nuevas herramientas y aplicaciones de análisis  en la nube. Las responsabilidades salientes incluyen reunirse con clientes, prospectos (empresas y PYMES) y analistas de la industria para analizar los requisitos del producto.',
+      'Es el profesional encargado tanto de la recopilación como del análisis de información y datos de ventas, mercados, consumidores, etc., con la finalidad de facilitar la toma de decisiones operacionales o estratégicas más adecuadas para lograr los objetivos de la empresa. La obtención de la información es únicamente una parte de su trabajo, puesto que el verdadero valor para la organización se encuentra en su posterior análisis y procesamiento.',
     SoftSkills: [
-      'Trabajo en equipo',
       'Liderazgo, proactividad',
       'buena organización y de trabajo bajo presión',
       'excelente comunicación',
@@ -103,26 +102,7 @@ export const jobsObj = [
       'capacidad de gestión de conflicto',
       'alto sentido de resultados',
     ],
-    TechSkills: ['Jira', 'Excel avanzado', 'Proyect', 'PPT'],
-  },
-  {
-    name: 'Sales Rep',
-    image: 'SalesRep.png',
-    FuncionesConocimientos:
-      'Experiencia en ventas, preferiblemente dentro de una organización,experiencia en gestión de ventas,comprensión sólida de las aplicaciones y la tecnología de colaboración, Historial consistente de venta de software en cuentas comerciales y logro de objetivos personales y de equipo, Capacidad para hacer crecer el negocio de manera estratégica, incluida la generación de demanda, Excelentes habilidades de coaching, escritura, descubrimiento y presentación, Historia de prosperar en un entorno que cambia rápidamente, Entusiasmo por aumentar la felicidad del cliente y profundizar las relaciones con los clientes, Cómodo y dispuesto a ser un colaborador práctico, Licenciatura requerida.',
-    SoftSkills: [
-      'Trabajo en equipo',
-      'Liderazgo, proactividad',
-      'buena organización y de trabajo bajo presión',
-      'excelente comunicación',
-      'capacidades analíticas y de resolución de problemas',
-      'paciencia y perseverancia para resolver problemas',
-      'capacidad de gestión de conflicto',
-      'alto sentido de resultados',
-      'apasionado en ventas',
-      'negociación y planteamiento de Fases de trabajo',
-    ],
-    TechSkills: [],
+    TechSkills: ['Data Discovery applications','Herramientas para gestión de datos',  'herramienta de reporting'],
   },
   {
     name: 'Head Técnico',
@@ -155,23 +135,6 @@ export const jobsObj = [
     ],
   },
   {
-    name: 'Quality Assurance',
-    image: 'QA.png',
-    FuncionesConocimientos:
-      'Diseño y creación de herramientas de Software que permitan probar las funcionalidades y certificar la calidad de los productos generadas por el área de desarrollo de la empresa.',
-    SoftSkills: [
-      'Trabajo en equipo',
-      'proactividad',
-      'buena organización y de trabajo bajo presión',
-      'excelente comunicación',
-      'capacidades analíticas y de resolución de problemas',
-      'paciencia y perseverancia para resolver problemas',
-      'capacidad de gestión de conflicto',
-      'alto sentido de resultados',
-    ],
-    TechSkills: [],
-  },
-  {
     name: 'Scrum Master',
     image: 'ScrumMaster.png',
     FuncionesConocimientos:
@@ -189,40 +152,7 @@ export const jobsObj = [
     TechSkills: [],
   },
   {
-    name: 'Monitoring',
-    image: 'Monitoring.png',
-    FuncionesConocimientos:
-      'Verificar el consumo de recursos en el sistema operativo, Verificar el correcto funcionamiento de las soluciones implementadas, Analizar y documentar los hallazgos encontrados, Ejecución de queries en BD, Compartir al equipo de desarrollo el análisis realizado en caso de no poder dar solución al problema.',
-    SoftSkills: [
-      'Trabajo en equipo',
-      'proactividad',
-      'buena organización y de trabajo bajo presión',
-      'excelente comunicación',
-      'capacidades analíticas y de resolución de problemas',
-      'paciencia y perseverancia para resolver problemas',
-      'capacidad de gestión de conflicto',
-      'alto sentido de resultados',
-    ],
-    TechSkills: [],
-  },
-  {
-    name: 'Full Stack',
-    image: 'PMO.png',
-    FuncionesConocimientos:
-      'Buscamos un Desarrollador Full Stack para trabajar en proyectos internacionales, tiene la capacidad de actuar sobre el viaje digital de cada usuario. Desde la configuración de plataformas, implementaciones e integraciones hasta la entrega de una gran experiencia al consumidor. Junto con todo el equipo de marketing trabajando para un mejor rendimiento digital, calificando aún más la entrega del viaje del usuario.',
-    SoftSkills: [
-      'Trabajo en equipo',
-      'proactividad',
-      'buena organización y de trabajo bajo presión',
-      'excelente comunicación',
-      'capacidades analíticas y de resolución de problemas',
-      'paciencia y perseverancia para resolver problemas',
-      'capacidad de gestión de conflicto, alto sentido de resultados',
-    ],
-    TechSkills: [],
-  },
-  {
-    name: 'Diseñador UX Senior',
+    name: 'Diseñador UX',
     image: 'UXSenior.png',
     FuncionesConocimientos:
       'Nuestros equipos de UX aspiran a crear productos que la gente ame: herramientas que hagan que el día de un vendedor sea más productivo, que la campaña de un vendedor sea más poderosa o que la aplicación de un desarrollador tenga más funciones. ',
@@ -236,14 +166,6 @@ export const jobsObj = [
       'capacidad de gestión de conflicto',
       'alto sentido de resultados',
     ],
-    TechSkills: [],
-  },
-  {
-    name: 'Becarios',
-    image: 'PMO.png',
-    FuncionesConocimientos:
-      'Este rol brinda la oportunidad de trabajar con un equipo técnico de alto rendimiento.  Podrá forjarse como excelente ingeniero entendiendo todas las fases del ciclo de vida de software. Se parte del equipo dinámico Si ha sido un tecnólogo de vanguardia y le ha apasionado mejorar la productividad de los desarrolladores ¡entonces este es el equipo para ti!',
-    SoftSkills: [],
     TechSkills: [],
   },
   {
